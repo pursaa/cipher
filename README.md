@@ -31,7 +31,6 @@
 * The program does the same steps as the ciphers above, but shifts letters left by a user-specified number of places.
   * Example Input: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 2
   * Example Output: "RFC OSGAI ZPMUL DMV HSKNQ MTCP RFC JYXW BME"
-
 * The program allows the user to choose the direction to shift the letters (left or right) and shifts the message accordingly.
   * Example Input: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 15, "right"
   * Example Output: "IWT FJXRZ QGDLC UDM YJBEH DKTG IWT APON SDV"

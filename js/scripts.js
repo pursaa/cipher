@@ -20,7 +20,7 @@ $(document).ready(function(){
     var direction = $("input:radio[name=direction]:checked").val();
     if (shift > 0 && shift < 26) {
       var output = encode(message, shift, direction);
-      $("#output").text(output);
+      $("#output").val(output);
       $("#input").val("");
       $("#shift").val("");
       $("#right").prop("checked", false);
