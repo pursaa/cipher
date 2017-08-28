@@ -30,3 +30,7 @@ function encode(message, shift, direction) {
   });
   return result;
 }
+
+function encodeVigenere(key, message) {
+  return message;
+}

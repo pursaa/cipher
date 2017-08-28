@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
   $("#input-form").submit(function(event) {
     event.preventDefault();
     var message = $("#input").val();
@@ -21,6 +20,12 @@ $(document).ready(function(){
     } else {
       alert("Please enter a valid number to shift.");
     }
+  });
 
+  $("#vigenere-encode").click(function() {
+    var key = $("#vigenere-key").val();
+    var message = $("#input").val();
+    var output = encodeVigenere(key, message);
+    $("#output").val(output);
   });
 });
