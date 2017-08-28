@@ -13,6 +13,15 @@ $(document).ready(function(){
     $("#input").val("");
   });
 
+  $('#vigenere-decode').click(function() {
+    var input = $("#input").val();
+    var key = $("#key").val();
+    var output = vigenereDecode(input, key);
+    $("#output").text(output);
+    $("#input").val("");
+  });
+
+
   $("#input-form").submit(function(event) {
     event.preventDefault();
     var message = $("#input").val();
