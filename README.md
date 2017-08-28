@@ -2,7 +2,7 @@
 
 ## Specifications
 
-### Encode: Generic Caesar
+### Encode: Classic Caesar
 
 * The program does nothing with non-alphabet characters.
   * Example Input: "12345!"
@@ -22,6 +22,16 @@
 
 ### Encode: ROT13
 
-* The program does the same steps as the Generic Caesar cipher, but shifts letters by 13 places.
+* The program does the same steps as the Classic Caesar cipher, but shifts letters by 13 places.
   * Example Input: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
   * Example Output: "GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT"
+
+### Encode: Generic Caesar
+
+* The program does the same steps as the ciphers above, but shifts letters left by a user-specified number of places.
+  * Example Input: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 2
+  * Example Output: "RFC OSGAI ZPMUL DMV HSKNQ MTCP RFC JYXW BME"
+
+* The program allows the user to choose the direction to shift the letters (left or right) and shifts the message accordingly.
+  * Example Input: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", 15, "right"
+  * Example Output: "IWT FJXRZ QGDLC UDM YJBEH DKTG IWT APON SDV"
