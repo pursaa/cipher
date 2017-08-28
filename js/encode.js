@@ -50,9 +50,14 @@ function encodeVigenere(key, message) {
   }
   var messageArray = message.split("");
   var result = ""
+  var counter = 0;
   messageArray.forEach(function(letter) {
     if (/[a-z]/i.test(letter)) {
-      result += letter;
+      result += encodeLetter(letter, keyValues[counter], "right");
+      counter += 1;
+      if (counter >= keyValues.length) {
+        counter = 0;
+      }
     }
   });
   return result;
