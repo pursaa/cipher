@@ -16,38 +16,34 @@
   <body>
     <div class="container">
       <h1></h1>
-    </div>
-    <form id="input-form">
-      <div class="form-group">
-        Input: <input type="text" id="input"><br>
-      </div>
-      <form>
-        <input type="radio" name="direction" value="left" checked> left<br>
-        <input type="radio" name="direction" value="right"> right<br>
+        <form id="input-form">
+          <div class="form-group">
+            <label for="input">Input: </label>
+            <input type="text" id="input" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="shift">Shift by:</label>
+            <input type="number" id="shift" class="form-control" min=1 max=25>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" id="left" name="direction" value="left" checked> Left
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" id="right" name="direction" value="right"> Right
+            </label>
+          </div>
+          <button type="submit" id="generic-caesar-encode" class="btn">Encode Custom Cipher</button>
+          <button id="caesar-encode" type="button" class="btn">Caesar Cipher Encode</button>
+          <button id="rot-13-encode" type="button" class="btn">ROT13 Cipher Encode</button>
+          <button type="submit" class="btn" onclick="ceaserCipherThreeDecode()">Caesar Cipher Three Decode</button>
+          <button type="submit" class="btn" onclick="ceaserCipherThirteenDecode()">Caesar Cipher Thirteen Decode</button>
       </form>
-      <select id="num">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-      </select>
-      <br>
-      <br>
-      <button id="caesar-encode" type="button" class="btn">Caesar Cipher Encode</button>
-      <button id="rot-13-encode" type="button" class="btn">ROT13 Cipher Encode</button>
-      <button type="submit" class="btn" onclick="caesarCipherThreeDecode()">Caesar Cipher Three Decode</button>
-      <button type="submit" class="btn" onclick="caesarCipherThirteenDecode()">Caesar Cipher Thirteen Decode</button>
-    <p id="output"></p>
-  </form>
+      <p id="output"></p>
+    </div>
+
 
   </body>
 </html>

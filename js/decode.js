@@ -1,4 +1,4 @@
-function caesarCipherThreeDecode(){
+function decode(){
   event.preventDefault();
   var input = $("#input").val();
   var dir = $('input[name="direction"]:checked').val();
@@ -45,9 +45,3 @@ function caesarCipherThreeDecode(){
   input = input.join("");
   $("#output").text(input);
 }
-
-//
-// 1
-// x: = 90
-// y:
-// z:
