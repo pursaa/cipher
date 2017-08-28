@@ -1,22 +1,24 @@
-function encodeLetter(message) {
-  if (/[^a-z]/i.test(message)) {
-    return message;
+// left shifts a given letter by "shift" amount.
+function encodeLetter(letter, shift) {
+  if (/[^a-z]/i.test(letter)) {
+    return letter;
   } else {
-    var charCode = message.charCodeAt(0);
-    if (charCode >= 65 && charCode <= 67 || charCode >= 97 && charCode <= 99) {
-      charCode = charCode - 3 + 26;
+    var charCode = letter.charCodeAt(0);
+    if (charCode < 65 + shift || (charCode > 90 && charCode < 97 + shift)) {
+      charCode = charCode - shift + 26;
     } else {
-      charCode = charCode - 3;
+      charCode = charCode - shift;
     }
     return String.fromCharCode(charCode);
   }
 }
 
-function encode(message) {
+// left shifts a given message by "shift" amount.
+function encode(message, shift) {
   var messageArray = message.split("");
   var result = "";
   messageArray.forEach(function(letter){
-    result += encodeLetter(letter);
+    result += encodeLetter(letter, shift);
   });
   return result;
 }
