@@ -14,39 +14,61 @@
   </head>
   <body>
     <div class="container">
-      <h1></h1>
-        <form id="input-form">
-          <div class="form-group">
-            <label for="input">Input: </label>
-            <input type="text" id="input" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="input">Key: </label>
-            <input type="text" id="key" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="shift">Shift by:</label>
-            <input type="number" id="shift" class="form-control" min=1 max=25>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" id="left" name="direction" value="left" checked> Left
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" id="right" name="direction" value="right"> Right
-            </label>
-          </div>
-          <button type="submit" id="generic-caesar-encode" class="btn">Encode Custom Cipher</button>
-          <button id="caesar-encode" type="button" class="btn">Caesar Cipher Encode</button>
-          <button id="rot-13-encode" type="button" class="btn">ROT13 Cipher Encode</button>
-          <button type="submit" class="btn" onclick="ceaserCipherThreeDecode()">Caesar Cipher Three Decode</button>
-          <button type="submit" class="btn" onclick="ceaserCipherThirteenDecode()">Caesar Cipher Thirteen Decode</button>
-          <!-- <button type="submit" class="btn" id="vigenere-decode">Vigenere Decode</button> -->
+      <div class="jumbotron">
+        <h1>Substitution Ciphers</h1>
+      </div>
+      <h3>Explanation of what Cipers are </h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <form id="input-form" class="row">
+        <div class="form-group col-sm-4">
+          <label for="input">Input: </label>
+          <textarea id="input" rows="14" class="form-control"></textarea>
+        </div>
+        <div class="col-sm-4">
+
+        <div class="form-group">
+          <label for="shift">Shift by:</label>
+          <input type="number" id="shift" class="form-control" min=1 max=25>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="left" name="direction" value="left" checked> Left
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="right" name="direction" value="right"> Right
+          </label>
+        </div>
+        <h4>Action:</h4>
+        <div class="radio">
+          <label>
+            <input type="radio" id="encode" name="action" value="encode" checked> Encode
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="decode" name="action" value="decode"> Decode
+          </label>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+
+        <div class="form-group">
+          <label for="vigenere-key">Key:</label>
+          <input type="text" id="vigenere-key" class="form-control">
+        </div>
+        <button type="button" id="vigenere-encode" class="btn">Vigenere Encode</button>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label for="output">Output: </label>
+          <textarea id="output" rows="14" class="form-control" readonly></textarea>
+        </div>
+    </div>
+
       </form>
-      <button type="submit" class="btn" id="vigenere-decode">Vigenere Decode</button>
-      <p id="output"></p>
     </div>
 
 
