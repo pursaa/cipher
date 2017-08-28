@@ -31,6 +31,29 @@ function encode(message, shift, direction) {
   return result;
 }
 
+function getKeyValue(letter) {
+  if(/[^a-z]/i.test(letter)) {
+    return "Error";
+  } else {
+    return letter.charCodeAt(0) - 97;
+  }
+}
+
 function encodeVigenere(key, message) {
-  return message;
+  var keyArray = key.toLowerCase().split("");
+  var keyValues = keyArray.map(function(letter) {
+    var value = getKeyValue(letter);
+    return value
+  });
+  if (keyValues.includes("Error")) {
+    return "Error";
+  }
+  var messageArray = message.split("");
+  var result = ""
+  messageArray.forEach(function(letter) {
+    if (/[a-z]/i.test(letter)) {
+      result += letter;
+    }
+  });
+  return result;
 }
