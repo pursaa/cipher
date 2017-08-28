@@ -2,7 +2,7 @@ function decode(){
   event.preventDefault();
   var input = $("#input").val();
   var dir = $('input[name="direction"]:checked').val();
-  var num = parseInt($("#num option:selected").val());
+  var num = parseInt($("#shift").val());
   var alpha = 26;
   input = input.split("");
   var temp = 0;

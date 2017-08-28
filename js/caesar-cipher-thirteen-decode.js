@@ -1,6 +1,6 @@
-function ceaserCipherThirteenDecode(input) {
+function caeserCipherThirteenDecode(input) {
   event.preventDefault();
-  var input = $("#input").val();
+  var input = $("#shift").val();
   input = input.split("");
   var x = 0;
   for (var i = 0; i < input.length; i++) {
