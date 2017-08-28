@@ -44,11 +44,18 @@
             <input type="radio" id="right" name="direction" value="right"> Right
           </label>
         </div>
-        <button type="submit" id="generic-caesar-encode" class="btn">Encode Custom Cipher</button>
-        <button id="caesar-encode" type="button" class="btn">Caesar Cipher Encode</button>
-        <button id="rot-13-encode" type="button" class="btn">ROT13 Cipher Encode</button>
-        <button type="submit" class="btn" onclick="ceaserCipherThreeDecode()">Caesar Cipher Three Decode</button>
-        <button type="submit" class="btn" onclick="ceaserCipherThirteenDecode()">Caesar Cipher Thirteen Decode</button>
+        <h4>Action:</h4>
+        <div class="radio">
+          <label>
+            <input type="radio" id="encode" name="action" value="encode" checked> Encode
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" id="decode" name="action" value="decode"> Decode
+          </label>
+        </div>
+        <button type="submit" id="generic-caesar-encode" class="btn">Submit</button>
       </div>
       <div class="col-sm-4">
 

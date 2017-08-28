@@ -43,5 +43,5 @@ function decode(){
   }
 
   input = input.join("");
-  $("#output").text(input);
+  $("#output").val(input);
 }
