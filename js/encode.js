@@ -1,4 +1,4 @@
-function encode(message) {
+function encodeLetter(message) {
   if (/[^a-z]/i.test(message)) {
     return message;
   } else {
@@ -10,4 +10,13 @@ function encode(message) {
     }
     return String.fromCharCode(charCode);
   }
+}
+
+function encode(message) {
+  var messageArray = message.split("");
+  var result = "";
+  messageArray.forEach(function(letter){
+    result += encodeLetter(letter);
+  });
+  return result;
 }

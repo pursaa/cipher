@@ -13,9 +13,9 @@
 * The program replaces a, b, or c with x, y, and z, respectively.
   * Example Input: "A"
   * Example Output: "X"
+* The program replaces characters with the coded character of the same case.
+  * Example Input: "a"
+  * Example Output: "x"
 * The program replaces all letters in an inputted string following the rules above.
   * Example Input: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
   * Example Output: "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"
-* The program replaces characters with the coded character of the same case.
-  * Example Input: "The quick brown fox"
-  * Example Output: Qeb nrfzh yoltk clu"
