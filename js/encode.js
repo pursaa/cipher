@@ -102,8 +102,27 @@ FourSquare.prototype.makeSquare = function(string) {
   return square;
 }
 
+FourSquare.prototype.getCoordinates = function(character) {
+  var coordinates = [];
+  for (var i = 0; i < 5; i++) {
+    var index = this.alphabet[i].indexOf(character);
+    if (index > -1) {
+      coordinates = [i, index];
+    }
+  }
+  return coordinates;
+}
+
+FourSquare.prototype.encode = function(message) {
+  var messageArray = message.toLowerCase().split("");
+  for (var i = 0; i < messageArray.length; i++) {
+    console.log(this.getCoordinates(messageArray[i]));
+  }
+}
+
 function encodeFourSquare(key1, key2, message) {
   var cipher = new FourSquare(key1, key2);
   console.log(cipher);
+  var result = cipher.encode(message);
   return message;
 }
