@@ -54,15 +54,15 @@ $(document).ready(function(){
     var message = $("#input").val();
     var output = decodeFourSquare(key1, key2, message);
     $("#output").val(output);
-    $("#input").val("");
+
   });
 
   $("#xor").click(function(){
     var message = $("#input").val();
     var key = $("#xor-key").val();
-    console.log(key, message);
     var output = xor(key, message);
     $("#output").val(output);
+    $("#input").val("");
   });
 });
 
