@@ -5,6 +5,7 @@ h4 {
 
 body {
   background-color: #242624;
+  color: #0f840f;
 }
 .form-group {
   margin-top: 10px;
@@ -37,8 +38,8 @@ h1.action {
 
 * {
   font-family: 'VT323', monospace;
-  font-size: 15px;
-  color: #0cd113;
+  font-size: 25px;
+  color: #0f840f;
 }
 
 .blink-me {
@@ -62,10 +63,11 @@ float: right;
 background-color: black;
 }
 
-#output {
+#output, #input, #shift, #vigenere-key {
   background-color: black;
+  color: #0f840f;
+  font-size: 20px;
 }
 
-#input {
-  background-color: black;
-}
+#show,#content{display:none;}
+#show:checked~#content{display:block;}
