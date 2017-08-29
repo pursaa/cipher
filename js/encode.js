@@ -114,15 +114,26 @@ FourSquare.prototype.getCoordinates = function(character) {
 }
 
 FourSquare.prototype.encode = function(message) {
-  var messageArray = message.toLowerCase().split("");
-  for (var i = 0; i < messageArray.length; i++) {
-    console.log(this.getCoordinates(messageArray[i]));
+  message = message.toLowerCase().replace(/[^a-pr-z]/g, "");
+  if (message.length % 2 !== 0) {
+    message = message + "x";
   }
+  var messageArray = message.split("");
+  var result = "";
+  for (var i = 0; i < messageArray.length; i += 2) {
+    var letter1 = messageArray[i];
+    var letter2 = messageArray[i+1];
+    var coordinate1 = this.getCoordinates(letter1);
+    var coordinate2 = this.getCoordinates(letter2);
+    var code1 = this.key1[coordinate2[0]][coordinate1[1]];
+    var code2 = this.key2[coordinate1[0]][coordinate2[1]];
+    result += code1 + code2;
+  }
+  return result;
 }
 
 function encodeFourSquare(key1, key2, message) {
   var cipher = new FourSquare(key1, key2);
-  console.log(cipher);
   var result = cipher.encode(message);
-  return message;
+  return result;
 }
