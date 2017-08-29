@@ -114,6 +114,9 @@
 * Program returns an error if ciphertext is not an even length.
   * Example Input: "xyz"
   * Example Output: "Invalid Ciphertext"
+* Program returns an error if ciphertext has any non-alphabet characters or qs.
+  * Example Input: "123Q!"
+  * Example Output: "Invalid Ciphertext"
 * For a pair of cipher characters, the program finds the first character's location in keysquare 1, and the second character's location in keysquare 2.
   * Example Input: "fy"
   * Example Output: [4, 1], [2, 0]
