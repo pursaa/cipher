@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $("#input-form").submit(function(event) {
     event.preventDefault();
+    var directions = ["left", "right"];
     var message = $("#input").val();
     var shift = parseInt($("#shift").val());
     var direction = $("input:radio[name=direction]:checked").val();
@@ -11,11 +12,11 @@ $(document).ready(function(){
         output = encode(message, shift, direction);
         $("#output").val(output);
         $("#input").val("");
-        $("#shift").val("");
-        $("#right").prop("checked", false);
-        $("#left").prop("checked", true);
       } else {
-        decode();
+        direction = directions[(directions.indexOf(direction) + 1) % 2];
+        output = decode(message, direction, shift);
+        $("#output").val(output);
+        $("#input").val("");
       }
     } else {
       alert("Please enter a valid number to shift.");
@@ -38,12 +39,13 @@ $(document).ready(function(){
     $("#output").val(output);
     $("#input").val("");
   });
-  $("#vigenere-decode").click(function() {
 
+  $("#vigenere-decode").click(function() {
     var key = $("#vigenere-key").val();
     var message = $("#input").val();
     var output = vigenereDecode(key, message);
     $("#output").val(output);
+    $("#input").val("");
   });
 });
 
