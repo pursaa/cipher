@@ -74,3 +74,9 @@ function vigenereDecode(key, input) {
   output = output.replace(/,/g, "");
   return output;
 }
+
+function decodeFourSquare(key1, key2, message) {
+  var cipher = new FourSquare(key1, key2);
+  var result = cipher.decode(message);
+  return result;
+}

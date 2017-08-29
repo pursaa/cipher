@@ -37,10 +37,10 @@ FourSquare.prototype.makeSquare = function(string) {
   return square;
 }
 
-FourSquare.prototype.getCoordinates = function(character) {
+FourSquare.prototype.getCoordinates = function(character, keysquare) {
   var coordinates = [];
   for (var i = 0; i < 5; i++) {
-    var index = this.alphabet[i].indexOf(character);
+    var index = keysquare[i].indexOf(character);
     if (index > -1) {
       coordinates = [i, index];
     }
@@ -58,11 +58,31 @@ FourSquare.prototype.encode = function(message) {
   for (var i = 0; i < messageArray.length; i += 2) {
     var letter1 = messageArray[i];
     var letter2 = messageArray[i+1];
-    var coordinate1 = this.getCoordinates(letter1);
-    var coordinate2 = this.getCoordinates(letter2);
+    var coordinate1 = this.getCoordinates(letter1, this.alphabet);
+    var coordinate2 = this.getCoordinates(letter2, this.alphabet);
     var code1 = this.key1[coordinate2[0]][coordinate1[1]];
     var code2 = this.key2[coordinate1[0]][coordinate2[1]];
     result += code1 + code2;
   }
   return result;
+}
+
+FourSquare.prototype.decode = function(message) {
+  message = message.toLowerCase();
+  if (message.match(/[^a-pr-z]/) || message.length % 2 !== 0) {
+    return "Invalid Ciphertext";
+  } else {
+    var messageArray = message.split("");
+    var result = "";
+    for (var i = 0; i < message.length; i += 2) {
+      var char1 = messageArray[i];
+      var char2 = messageArray[i+1];
+      var coordinate1 = this.getCoordinates(char1, this.key1);
+      var coordinate2 = this.getCoordinates(char2, this.key2);
+      var letter1 = this.alphabet[coordinate2[0]][coordinate1[1]];
+      var letter2 = this.alphabet[coordinate1[0]][coordinate2[1]];
+      result += letter1 + letter2;
+    }
+    return result;
+  }
 }
