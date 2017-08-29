@@ -31,6 +31,14 @@ $(document).ready(function(){
     $("#input").val("");
   });
 
+  $("#vigenere-decode").click(function() {
+    var key = $("#vigenere-key").val();
+    var message = $("#input").val();
+    var output = vigenereDecode(key, message);
+    $("#output").val(output);
+    $("#input").val("");
+  });
+
   $("#foursquare-encode").click(function(){
     var key1 = $("#foursquare-key-1").val();
     var key2 = $("#foursquare-key-2").val();
@@ -40,10 +48,11 @@ $(document).ready(function(){
     $("#input").val("");
   });
 
-  $("#vigenere-decode").click(function() {
-    var key = $("#vigenere-key").val();
+  $("#foursquare-decode").click(function(){
+    var key1 = $("#foursquare-key-1").val();
+    var key2 = $("#foursquare-key-2").val();
     var message = $("#input").val();
-    var output = vigenereDecode(key, message);
+    var output = decodeFourSquare(key1, key2, message);
     $("#output").val(output);
     $("#input").val("");
   });

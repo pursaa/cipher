@@ -58,7 +58,8 @@
   * Example Input: Key: "CAT", Message: "Doggy"
   * Example Output: "Foziy"
 
-### Encode: Four-Square
+### Four-Square
+#### Encode
 
 * The program returns empty strings for non-alphabet characters and qs.
   * Example Input: "123Q!!!"
@@ -91,10 +92,10 @@
   * Example Output: "he"
 * The program takes two letters, and assigns them coordinates based on their location in the alphabet square.
   * Example Input: "HE"
-  * Example Output: [2, 2], [4, 0]
+  * Example Output: [2, 1], [4, 0]
 * The program generates two new pairs of coordinates: Coordinate1 = [Letter2X, Letter1Y], and Coordinate2 = [Letter1X, Letter2Y]. (These represent the intersections of the two letters in a FourSquare cipher grid.)
   * Example Input: "HE"
-  * Example Output: [4, 2], [2, 0]
+  * Example Output: [4, 1], [2, 0]
 * The program returns the letters at these coordinates in the respective keysquares.
   * Example Input: "HE"
   * Example Output: "FY"
@@ -104,3 +105,24 @@
 * If an input string does not have an even number of letters, program adds an X to the end before encoding.
   * Example Input: "This is a test"
   * Example Output: "thisisatestx"
+
+#### Decode
+
+* Program takes a ciphertext and breaks into 2-letter chunks.
+  * Example Input: "fygmkyhobxmfkkkimd"
+  * Example Output: "fy gm ky ho bx mf kk ki md"
+* Program returns an error if ciphertext is not an even length.
+  * Example Input: "xyz"
+  * Example Output: "Invalid Ciphertext"
+* For a pair of cipher characters, the program finds the first character's location in keysquare 1, and the second character's location in keysquare 2.
+  * Example Input: "fy"
+  * Example Output: [4, 1], [2, 0]
+* Program generates a new pair of coordinates: Coordinate1 = [Char2x, Char1y] and Coordinate2 = [Char1x, Char2y].
+  * Example Input: "fy"
+  * Example Output: [2, 1], [4, 0]
+* Program returns the letters at these coordinates in the plaintext alphabet square.
+  * Example Input: "fy"
+  * Example Input: "he"
+* Program does this for all pairs of characters in the ciphertext.
+  * Example Input: "fygmkyhobxmfkkkimd"
+  * Example Output: "helpmeobiwankenobi"
