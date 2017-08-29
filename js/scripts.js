@@ -29,10 +29,17 @@ $(document).ready(function(){
     $("#output").val(output);
   });
   $("#vigenere-decode").click(function() {
-    
+
     var key = $("#vigenere-key").val();
     var message = $("#input").val();
     var output = vigenereDecode(key, message);
     $("#output").val(output);
   });
 });
+
+function blinker() {
+    $('.blink-me').fadeOut(500);
+    $('.blink-me').fadeIn(900);
+}
+
+setInterval(blinker, 1000);

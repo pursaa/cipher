@@ -1,7 +1,11 @@
 h4 {
   margin-top: 20px;
+  font-weight: bold;
 }
 
+body {
+  background-color: #242624;
+}
 .form-group {
   margin-top: 10px;
   margin-bottom: 15px;
@@ -24,8 +28,44 @@ input[type=radio] {
 button[type=submit] {
   display: block;
   float: right;
+  background-color: black;
 }
 
 h1.action {
   margin-right: 5px;
+}
+
+* {
+  font-family: 'VT323', monospace;
+  font-size: 15px;
+  color: #0cd113;
+}
+
+.blink-me {
+  color: green;
+  background-color: #252628;
+  font-size: 45px;
+}
+
+.jumbotron {
+  background-color: #252628;
+  text-align: center;
+}
+
+
+#vigenere-encode {
+  background-color: black;
+}
+
+#vigenere-decode {
+float: right;
+background-color: black;
+}
+
+#output {
+  background-color: black;
+}
+
+#input {
+  background-color: black;
 }
