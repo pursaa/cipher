@@ -78,7 +78,27 @@ FourSquare.prototype.makeKey = function(key) {
       }
     }
   });
-  return result;
+  for (var i = 97; i < 123; i++) {
+    var letter = String.fromCharCode(i);
+    if (!result.includes(letter)) {
+      result += letter;
+    }
+  }
+  keySquare = this.makeSquare(result);
+  return keySquare;
+}
+
+FourSquare.prototype.makeSquare = function(string) {
+  var square = [[], [], [], [], []];
+  var counter = 0;
+  for (var i = 0; i < 25; i++) {
+    square[counter].push(string.charAt(i));
+    counter += 1;
+    if (counter >= 5) {
+      counter = 0;
+    }
+  }
+  return square;
 }
 
 function encodeFourSquare(key1, key2, message) {
