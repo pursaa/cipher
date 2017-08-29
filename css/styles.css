@@ -1,1 +1,31 @@
+h4 {
+  margin-top: 20px;
+}
 
+.form-group {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#shift {
+  width: 40%;
+  display: inline-block;
+}
+
+.radio {
+  display: inline-block;
+}
+
+input[type=radio] {
+  margin-left: 5px;
+  margin-right: 2px;
+}
+
+button[type=submit] {
+  display: block;
+  float: right;
+}
+
+h1.action {
+  margin-right: 5px;
+}
