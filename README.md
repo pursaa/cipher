@@ -57,3 +57,50 @@
 * The program encodes a multi-letter message with a key of different length, starting at the first character of the key again when the end of the key is reached.
   * Example Input: Key: "CAT", Message: "Doggy"
   * Example Output: "Foziy"
+
+### Encode: Four-Square
+
+* The program returns empty strings for non-alphabet characters and qs.
+  * Example Input: "123Q!!!"
+  * Example Output: ""
+* The program downcases the entire key.
+  * Example Input: "Hello"
+  * Example Output: "hello"
+* The program removes all duplicates from a key.
+  * Example Input: "hello"
+  * Example Output: "helo"
+* The program adds all other letters in alphabet (besides q) to the end of the key.
+  * Example Input: "example"
+  * Example Output: "examplbcdfghijknorstuvwxyz"
+* The program arranges the key in a 5 by 5 square.
+  * Example Input: "example"
+  * Example Output:  "e x a m p
+                      l b c d f
+                      g h i j k
+                      n o r s t
+                      u v w y z"
+* The program creates two keysquares from user input using the above steps.
+* The program creates an alphabet square, leaving out q.
+  * Example Output: "a b c d e
+                     f g h i j
+                     k l m n o
+                     p r s t u
+                     v w x y z"
+* The program downcases an input message:
+  * Example Input: "HE"
+  * Example Output: "he"
+* The program takes two letters, and assigns them coordinates based on their location in the alphabet square.
+  * Example Input: "HE"
+  * Example Output: [2, 2], [4, 0]
+* The program generates two new pairs of coordinates: Coordinate1 = [Letter2X, Letter1Y], and Coordinate2 = [Letter1X, Letter2Y]. (These represent the intersections of the two letters in a FourSquare cipher grid.)
+  * Example Input: "HE"
+  * Example Output: [4, 2], [2, 0]
+* The program returns the letters at these coordinates in the respective keysquares.
+  * Example Input: "HE"
+  * Example Output: "FY"
+* The program does the above steps for each pair of letters in an input longer than 2, and returns the resulting string.
+  * Example Input: message: "help me obi wan kenobi", key1: "Example" key2: "Keyword"
+  * Example Output: "FY GM KY HO BX MF KK KI MD"
+* If an input string does not have an even number of letters, program adds an X to the end before encoding.
+  * Example Input: "This is a test"
+  * Example Output: "thisisatestx"

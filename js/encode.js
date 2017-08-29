@@ -63,6 +63,26 @@ function encodeVigenere(key, message) {
   return result;
 }
 
+function FourSquare(key1, key2) {
+  this.key1 = this.makeKey(key1);
+  this.key2 = this.makeKey(key2);
+}
+
+FourSquare.prototype.makeKey = function(key) {
+  var result = "";
+  var keyArray = key.toLowerCase().split("");
+  keyArray.forEach(function(letter) {
+    if (/[a-pr-z]/.test(letter)) {
+      if (!result.includes(letter)) {
+        result += letter;
+      }
+    }
+  });
+  return result;
+}
+
 function encodeFourSquare(key1, key2, message) {
+  var cipher = new FourSquare(key1, key2);
+  console.log(cipher);
   return message;
 }
