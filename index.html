@@ -4,9 +4,11 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/foursquare.js"></script>
+    <script src="js/xor.js"></script>
     <script src="js/encode.js"></script>
     <script src="js/decode.js"></script>
     <script src="js/scripts.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -74,7 +76,15 @@
         </div>
         <button type="button" id="foursquare-encode" class="btn">Four-Square Encode</button>
         <button type="button" id="foursquare-decode" class="btn">Four-Square Decode</button>
+
+        <div class="form-group">
+          <h4>XOR Cipher</h4>
+          <label for="xor-key">XOR Key:</label>
+          <input type="text" id="xor-key" class="form-control">
+        </div>
+        <button type="button" id="xor" class="btn">xor</button>
       </div>
+
 
       <div class="col-sm-4">
         <div class="form-group">
