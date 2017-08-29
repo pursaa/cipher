@@ -62,3 +62,7 @@ function encodeVigenere(key, message) {
   });
   return result;
 }
+
+function encodeFourSquare(key1, key2, message) {
+  return message;
+}
