@@ -56,10 +56,8 @@ FourSquare.prototype.encode = function(message) {
   var messageArray = message.split("");
   var result = "";
   for (var i = 0; i < messageArray.length; i += 2) {
-    var letter1 = messageArray[i];
-    var letter2 = messageArray[i+1];
-    var coordinate1 = this.getCoordinates(letter1, this.alphabet);
-    var coordinate2 = this.getCoordinates(letter2, this.alphabet);
+    var coordinate1 = this.getCoordinates(messageArray[i], this.alphabet);
+    var coordinate2 = this.getCoordinates(messageArray[i+1], this.alphabet);
     var code1 = this.key1[coordinate2[0]][coordinate1[1]];
     var code2 = this.key2[coordinate1[0]][coordinate2[1]];
     result += code1 + code2;
@@ -75,10 +73,8 @@ FourSquare.prototype.decode = function(message) {
     var messageArray = message.split("");
     var result = "";
     for (var i = 0; i < message.length; i += 2) {
-      var char1 = messageArray[i];
-      var char2 = messageArray[i+1];
-      var coordinate1 = this.getCoordinates(char1, this.key1);
-      var coordinate2 = this.getCoordinates(char2, this.key2);
+      var coordinate1 = this.getCoordinates(messageArray[i], this.key1);
+      var coordinate2 = this.getCoordinates(messageArray[i+1], this.key2);
       var letter1 = this.alphabet[coordinate2[0]][coordinate1[1]];
       var letter2 = this.alphabet[coordinate1[0]][coordinate2[1]];
       result += letter1 + letter2;
