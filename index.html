@@ -27,34 +27,32 @@
         </div>
         <div class="col-sm-4">
 
-        <div class="form-group">
+        <div class="form-group caesar-cipher">
+          <h4>Caesar Cipher</h4>
           <label for="shift">Shift by:</label>
           <input type="number" id="shift" class="form-control" min=1 max=25>
-        </div>
-        <div class="radio">
           <label>
             <input type="radio" id="left" name="direction" value="left" checked> Left
           </label>
-        </div>
-        <div class="radio">
           <label>
             <input type="radio" id="right" name="direction" value="right"> Right
           </label>
         </div>
-        <h4>Action:</h4>
-        <div class="radio">
+
+        <div class="action">
+          <label class="action">Action:</label>
           <label>
             <input type="radio" id="encode" name="action" value="encode" checked> Encode
           </label>
-        </div>
-        <div class="radio">
+
           <label>
             <input type="radio" id="decode" name="action" value="decode"> Decode
           </label>
+          <button type="submit" class="btn">Submit</button>
         </div>
-        <button type="submit" class="btn">Submit</button>
 
         <div class="form-group">
+          <h4>Vigenere Cipher</h4>
           <label for="vigenere-key">Key:</label>
           <input type="text" id="vigenere-key" class="form-control">
         </div>
