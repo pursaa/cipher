@@ -1,8 +1,4 @@
-function decode(){
-  event.preventDefault();
-  var input = $("#input").val();
-  var dir = $('input[name="direction"]:checked').val();
-  var num = parseInt($("#shift").val());
+function decode(input, dir, num){
   var alpha = 26;
   input = input.split("");
   var temp = 0;
@@ -43,10 +39,11 @@ function decode(){
   }
 
   input = input.join("");
-  $("#output").val(input);
+  return input;
 }
 
-function vigenereDecode(input, key){
+function vigenereDecode(key, input) {
+
   var keyNum = [];
   var alpha = 26;
   input = input.split("");
@@ -57,34 +54,23 @@ function vigenereDecode(input, key){
   for (var i = 0; i < key.length; i++) {
     temp = key[i].charCodeAt();
     if(temp > 64 && temp < 91){
-      temp -= 64 ;
+      temp -= 65;
       keyNum.push(temp);
     }else if(temp > 96 && temp < 123) {
-      temp -= 96 ;
+      temp -= 97;
       keyNum.push(temp);
     }
   }
-  for (var i = 0; i < input.length; i++) {
-    temp = key[i].charCodeAt();
-    if(temp > 64 && temp < 91){
-      debugger;
-      temp += keyNum[i];
-      if(temp > 90)
-        temp -= alpha;
-        debugger;
-
+  var counter = 0;
+  for(var i = 0; i < input.length; i++){
+    var temp2 = decode(input[i], "left", keyNum[counter]);
+    output[i] = temp2;
+    counter += 1;
+    if (counter >= keyNum.length) {
+      counter = 0;
     }
-    if(temp > 96 && temp < 123){
-      temp += keyNum[i];
-      if(temp > 122)
-        temp -= alpha;
-    }
-    output[i] = String.fromCharCode(temp);
   }
-  console.log(input);
-  console.log(keyNum);
-  console.log(output);
-  input.join("");
-  // var output = input.replace(",", "");
+  output = output.join("");
+  output = output.replace(/,/g, "");
   return output;
 }

@@ -28,4 +28,11 @@ $(document).ready(function(){
     var output = encodeVigenere(key, message);
     $("#output").val(output);
   });
+  $("#vigenere-decode").click(function() {
+    
+    var key = $("#vigenere-key").val();
+    var message = $("#input").val();
+    var output = vigenereDecode(key, message);
+    $("#output").val(output);
+  });
 });
