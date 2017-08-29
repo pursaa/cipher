@@ -54,13 +54,21 @@ $(document).ready(function(){
     var message = $("#input").val();
     var output = decodeFourSquare(key1, key2, message);
     $("#output").val(output);
-
+    $("#input").val("");
   });
 
-  $("#xor").click(function(){
+  $("#xor-encode").click(function(){
     var message = $("#input").val();
     var key = $("#xor-key").val();
     var output = xor(key, message);
+    $("#output").val(output);
+    $("#input").val("");
+  });
+
+  $("#xor-decode").click(function(){
+    var message = $("#input").val();
+    var key = $("#xor-key").val();
+    var output = xorDecode(key, message);
     $("#output").val(output);
     $("#input").val("");
   });
