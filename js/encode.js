@@ -66,6 +66,7 @@ function encodeVigenere(key, message) {
 function FourSquare(key1, key2) {
   this.key1 = this.makeKey(key1);
   this.key2 = this.makeKey(key2);
+  this.alphabet = this.makeKey("");
 }
 
 FourSquare.prototype.makeKey = function(key) {
@@ -80,7 +81,7 @@ FourSquare.prototype.makeKey = function(key) {
   });
   for (var i = 97; i < 123; i++) {
     var letter = String.fromCharCode(i);
-    if (!result.includes(letter)) {
+    if (!result.includes(letter) && letter !== "q") {
       result += letter;
     }
   }
