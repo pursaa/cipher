@@ -45,6 +45,11 @@ $(document).ready(function(){
     var output = vigenereDecode(key, message);
     $("#output").val(output);
   });
+
+  $(".ciphers").change(function() {
+    alert("Handler for .change() called.");
+  
+  });
 });
 
 function blinker() {

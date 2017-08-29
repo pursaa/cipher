@@ -1,10 +1,11 @@
 h4 {
   margin-top: 20px;
   font-weight: bold;
+  font-size: 25px;
 }
 
 body {
-  background-color: #242624;
+  background-color: black;
   color: #0f840f;
 }
 .form-group {
@@ -44,30 +45,34 @@ h1.action {
 
 .blink-me {
   color: green;
-  background-color: #252628;
+  background-color: black;
   font-size: 45px;
 }
 
 .jumbotron {
-  background-color: #252628;
+  background-color: black;
   text-align: center;
 }
 
-
-#vigenere-encode {
+#vigenere-encode, .btn {
   background-color: black;
+  border-style: dashed;
+  border-color: white;
 }
 
 #vigenere-decode {
 float: right;
 background-color: black;
+border-style: dashed;
+border-color: white;
 }
 
-#output, #input, #shift, #vigenere-key {
+#output, #input, #shift, #vigenere-key, #foursquare-key-1, #foursquare-key-2 {
   background-color: black;
   color: #0f840f;
   font-size: 20px;
 }
 
-#show,#content{display:none;}
-#show:checked~#content{display:block;}
+.cipher-group{
+  display: none;
+}
