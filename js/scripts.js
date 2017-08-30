@@ -96,6 +96,7 @@ $(document).ready(function(){
     $(cipher).show();
     $("#xor").hide();
     $(cipher).show();
+    $('#qrcode').hide();
   });
 });
 
@@ -104,9 +105,11 @@ function blinker() {
     $('.blink-me').fadeIn(900);
 }
 
-// function makeCode(){
-//   var input = $("#text").val();
-//   $('#qrcode').qrcode(input);
-// }
+function qrClick() {
+  var input = $("#output").val();
+  $("#qrcode").html("");
+  $('#qrcode').qrcode(input);
+  $('#qrcode').show();
+}
 
 setInterval(blinker, 1000);
