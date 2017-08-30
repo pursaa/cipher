@@ -24,23 +24,34 @@ function fillMessage(cipherFunction, shift, direction) {
   return result.join("");
 }
 
+function highlightAlphabet(charCode) {
+  $(".original-alphabet, .cipher-alphabet").children().removeClass("highlighted");
+  setTimeout(function() {
+    $(".original-alphabet ." + charCode).addClass("highlighted");
+  }, 500);
+  setTimeout(function() {
+    $(".cipher-alphabet ." + charCode).addClass("highlighted");
+  }, 1000);
+
+}
+
 function highlightMessage(counter) {
   setTimeout(function() {
     $(".original-message span:nth-child("+ (counter - 1)+ ")").removeClass("highlighted");
+    var charCode = $(".original-message span:nth-child("+ counter + ")").attr("class");
     $(".original-message span:nth-child("+ counter + ")").addClass("highlighted");
+    highlightAlphabet(charCode);
     counter++;
     if (counter <= testMessage.length) {
-      highlightStep(counter);
+      highlightMessage(counter);
     }
-  }, 300);
+  }, 1500);
 }
 
-function displayEncode() {
+function displayEncode(cipherMessage) {
   var counter = 1;
-  highlightStep(counter);
+  highlightMessage(counter);
 }
-
-
 
 $(document).ready(function() {
   fillShiftSelect();
@@ -52,8 +63,8 @@ $(document).ready(function() {
     var direction = $("[name=demo-direction]:checked").val();
     var cipherAlpha = fillAlphabet(encode, shift, direction);
     var cipherMessage = fillMessage(encode, shift, direction);
+
     $(".cipher-alphabet").html(cipherAlpha);
-    $(".cipher-message").html(cipherMessage);
-    displayEncode();
+    displayEncode(cipherMessage);
   });
 });
