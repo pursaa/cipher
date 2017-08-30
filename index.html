@@ -3,7 +3,9 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script src="js/foursquare.js"></script>
+    <script src="js/crypto.js"></script>
     <script src="js/xor.js"></script>
     <script src="js/encode.js"></script>
     <script src="js/decode.js"></script>
@@ -85,6 +87,15 @@
         <button type="button" id="xor-encode" class="btn">XOR Encode</button>
         <button type="button" id="xor-decode" class="btn">XOR Decode</button>
       </div>
+        
+        <div class="form-group">
+        <h4>Crypto Encryption</h4>
+        <label for="crypto-key">Crypto Key:</label>
+        <input type="text" id="crypto-key" class="form-control">
+      </div>
+      <button type="button" id="crypto-encode" class="btn">Crypto Encode</button>
+      <button type="button" id="crypto-decode" class="btn">Crypto Decode</button>
+    </div>
 
 
       <div class="col-sm-4">
