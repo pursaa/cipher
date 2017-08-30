@@ -1,3 +1,14 @@
+h3 {
+  text-align: center;
+}
+
+.y-axis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
 .vigenere-square p {
   line-height: 22px;
   margin: 0px;
