@@ -1,4 +1,4 @@
-var testMessage = "Hello, World!";
+var testMessage = "Helloworld";
 
 function fillVigenereSquare() {
   var result = "<p class='line-0'> &nbsp;&nbsp;" + fillAlphabet(encode, 0, "left") + "</p>";
@@ -21,13 +21,14 @@ function makeVigenereKey(key) {
 }
 
 $(document).ready(function() {
-  $(".original-message, .cipher-message").html(fillMessage(encode, 0, "left"));
+  $(".original-message, .cipher-message").html(fillMessage(testMessage, encode, 0, "left"));
   $(".vigenere-square").html(fillVigenereSquare());
 
   $("#vigenere-demo").submit(function(event) {
     event.preventDefault();
-    alert("got here");
     var key = $("#vigenere-demo-key").val();
+    var code = encodeVigenere(key, testMessage);
     $(".vigenere-key").html(makeVigenereKey(key));
+    $(".cipher-message").html(code);
   });
 });

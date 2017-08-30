@@ -1,3 +1,5 @@
+var testMessage = "Hello World!"
+
 // Fills our select function with all shift values.
 function fillShiftSelect() {
   for (var i = 0; i < 26; i++) {
@@ -71,14 +73,14 @@ $(document).ready(function() {
   // Sets up page, saving us lots of typing.
   fillShiftSelect();
   $(".original-alphabet, .cipher-alphabet").html(fillAlphabet(encode, 0, "left"));
-  $(".original-message, .cipher-message").html(fillMessage(encode, 0, "left"));
+  $(".original-message, .cipher-message").html(fillMessage(testMessage, encode, 0, "left"));
 
   // Any time our Caesar Cipher settings change, refresh our content.
   $("#demo-shift, input[name=demo-direction]").change(function() {
     var shift = $("#demo-shift").val();
     var direction = $("[name=demo-direction]:checked").val();
     var cipherAlpha = fillAlphabet(encode, shift, direction);
-    var cipherMessage = fillMessage(encode, shift, direction);
+    var cipherMessage = fillMessage(testMessage, encode, shift, direction);
 
     $(".cipher-alphabet").html(cipherAlpha);
     $(".cipher-message").html("");
