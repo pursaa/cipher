@@ -73,9 +73,26 @@ $(document).ready(function(){
     $("#input").val("");
   });
   
+<<<<<<< HEAD
   $(".ciphers").change(function() {
     alert("Handler for .change() called.");
 
+=======
+  $("#crypto-encode").click(function(){
+    var message = $("#input").val();
+    var key = $("#crypto-key").val();
+    var output = cryptoEncode(key, message);
+    $("#output").val(output);
+    $("#input").val("");
+  });
+
+  $("#crypto-decode").click(function(){
+    var message = $("#input").val();
+    var key = $("#crypto-key").val();
+    var output = cryptoDecode(key, message);
+    $("#output").val(output);
+    $("#input").val("");
+>>>>>>> master
   });
 });
 
