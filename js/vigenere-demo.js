@@ -113,12 +113,15 @@ $(document).ready(function() {
 
   $("#vigenere-demo").submit(function(event) {
     event.preventDefault();
-    $(".cipher-message").text("");
-
+    
     var key = $("#vigenere-demo-key").val();
     var code = encodeVigenere(key, testMessage);
-    $(".vigenere-key").html(makeVigenereKey(key));
-    console.log(code);
-    displayVigenere(code, key);
+    if (code.includes("Error")) {
+      alert("Please Enter a Valid Key");
+    } else {
+      $(".cipher-message").text("");
+      $(".vigenere-key").html(makeVigenereKey(key));
+      displayVigenere(code, key);
+    }
   });
 });
