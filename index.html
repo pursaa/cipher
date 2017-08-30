@@ -25,15 +25,15 @@
       <h3>Explanation of what Ciphers are: </h3>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       <br>
+
       <select class="ciphers">
-        <option value="caesar" selected="selected">Caesar Cipher</option>
-        <option value="vigenere">Vigenere Cipher</option>
-        <option value="foursquare">Four Square Cipher</option>
-      <option value="xor">Xor Cipher</option>
+        <option>Choose a cipher</option>
+        <option value="#caesar-cipher">Caesar Cipher</option>
+        <option value="#vigenere">Vigenere Cipher</option>
+        <option value="#four-square">Four Square Cipher</option>
+        <option value="#xor">Xor Cipher</option>
+        <option value="#a-e-s-crypto">A-E-S-Crypto</option>
       </select>
-      <div id="other">
-        Trigger the handler
-      </div>
 
       <!-- input -->
       <form id="input-form" class="row">
@@ -44,8 +44,8 @@
 
         <!-- caesar cipher -->
         <div class="col-sm-4">
-          <div class="caesar-cipher">
-            <div class="form-group-caesar-cipher">
+          <div id="caesar-cipher" class="cipher">
+            <div class="form-group caesar-cipher">
               <h4>Caesar Cipher</h4>
               <label for="shift">Shift by:</label>
               <input type="number" id="shift" class="form-control" min=1 max=25>
@@ -67,18 +67,19 @@
           </div>
 
         <!-- vigenere -->
-          <div class="vigenere">
+          <div id="vigenere" class="cipher">
             <div class="form-group">
               <h4>Vigenere Cipher</h4>
               <label for="vigenere-key">Key:</label>
               <input type="text" id="vigenere-key" class="form-control">
+              <br>
               <button type="button" id="vigenere-encode" class="btn">Vigenere Encode</button>
               <button type="button" id="vigenere-decode" class="btn">Vigenere Decode</button>
             </div>
           </div>
 
           <!-- foursquare -->
-          <div class="four-square">
+          <div id="four-square" class="cipher">
             <div class="form-group">
               <h4>Four-Square Cipher</h4>
               <label for="foursquare-key-1">Key 1:</label>
@@ -93,8 +94,8 @@
           </div>
 
         <!-- XOR -->
-          <div id="xor">
-            <div class="form-group">
+          <div id = "xor">
+            <div class="form-group" class="cipher">
               <h4>XOR Cipher</h4>
               <label for="xor-key">XOR Key:</label>
               <input type="text" id="xor-key" class="form-control">
@@ -102,19 +103,18 @@
             <button type="button" id="xor-encode" class="btn">XOR Encode</button>
             <button type="button" id="xor-decode" class="btn">XOR Decode</button>
           </div>
-        <button type="button" id="xor-encode" class="btn">XOR Encode</button>
-        <button type="button" id="xor-decode" class="btn">XOR Decode</button>
 
         <!-- Crypto -->
-      <div class="a-e-s-crypto">
+      <div id="a-e-s-crypto" class="cipher">
         <div class="form-group">
-          <h4>Crypto Encryption</h4>
+          <h4>AES Crypto</h4>
           <label for="crypto-key">Crypto Key:</label>
           <input type="text" id="crypto-key" class="form-control">
         </div>
-      </div>
       <button type="button" id="crypto-encode" class="btn">Crypto Encode</button>
       <button type="button" id="crypto-decode" class="btn">Crypto Decode</button>
+    </div>
+
     </div>
 
 

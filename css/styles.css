@@ -53,18 +53,12 @@ h1.action {
   background-color: black;
   text-align: center;
 }
-
-#vigenere-encode, .btn {
-  background-color: black;
-  border-style: dashed;
-  border-color: white;
+.btn {
+  border: 5px groove white;
 }
 
-#vigenere-decode {
-float: right;
-background-color: black;
-border-style: dashed;
-border-color: white;
+.ciphers{
+  background-color: #141414;
 }
 
 #output, #input {
@@ -78,4 +72,8 @@ border-color: white;
   background-color: black;
   color: #0f840f;
   font-size: 20px;
+}
+
+#caesar-cipher, #vigenere, #four-square, #xor, #a-e-s-crypto {
+  display: none;
 }

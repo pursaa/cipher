@@ -72,12 +72,7 @@ $(document).ready(function(){
     $("#output").val(output);
     $("#input").val("");
   });
-  
-<<<<<<< HEAD
-  $(".ciphers").change(function() {
-    alert("Handler for .change() called.");
 
-=======
   $("#crypto-encode").click(function(){
     var message = $("#input").val();
     var key = $("#crypto-key").val();
@@ -92,7 +87,15 @@ $(document).ready(function(){
     var output = cryptoDecode(key, message);
     $("#output").val(output);
     $("#input").val("");
->>>>>>> master
+
+  });
+
+  $(".ciphers").change(function() {
+  var cipher = $(".ciphers").val();
+  $(".cipher").hide();
+    $(cipher).show();
+    $("#xor").hide();
+    $(cipher).show();
   });
 });
 
