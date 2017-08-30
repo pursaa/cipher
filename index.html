@@ -11,104 +11,120 @@
     <script src="js/encode.js"></script>
     <script src="js/decode.js"></script>
     <script src="js/scripts.js"></script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
-    <title></title>
+    <title>Substitution Cipher</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
         <span class="blink-me">Substitution Ciphers</span>
       </div>
-      <h3>Explanation of what Cipers are: </h3>
-        <input type=checkbox id="show">
-        <label for="show"><ul><span>Click here</span> to read about Caesar Cipher</ul></label>
-        <span id="content"><li>The action of a Caesar cipher is to replace each plaintext letter with a different one a fixed number of places down the alphabet.</li><label for="hide"><span></span> </label> </span></br>
+      <h3>Explanation of what Ciphers are: </h3>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <br>
 
+      <select class="ciphers">
+        <option>Choose a cipher</option>
+        <option value="#caesar-cipher">Caesar Cipher</option>
+        <option value="#vigenere">Vigenere Cipher</option>
+        <option value="#four-square">Four Square Cipher</option>
+        <option value="#xor">Xor Cipher</option>
+        <option value="#a-e-s-crypto">A-E-S-Crypto</option>
+      </select>
+
+      <!-- input -->
       <form id="input-form" class="row">
         <div class="form-group col-sm-4">
           <label for="input">Input: </label>
           <textarea id="input" rows="14" class="form-control"></textarea>
         </div>
+
+        <!-- caesar cipher -->
         <div class="col-sm-4">
+          <div id="caesar-cipher" class="cipher">
+            <div class="form-group caesar-cipher">
+              <h4>Caesar Cipher</h4>
+              <label for="shift">Shift by:</label>
+              <input type="number" id="shift" class="form-control" min=1 max=25>
+              <label>
+              <input type="radio" id="left" name="direction" value="left" checked> Left
+              <input type="radio" id="right" name="direction" value="right"> Right
+              </label>
+              <div class="action">
+                <label class="action">Action:</label>
+                <label>
+                <input type="radio" id="encode" name="action" value="encode" checked> Encode
+                </label>
+                <label>
+                <input type="radio" id="decode" name="action" value="decode"> Decode
+                </label>
+              </div>
+              <button type="submit" class="btn">Submit</button>
+            </div>
+          </div>
 
-        <div class="form-group caesar-cipher">
-          <h4>Caesar Cipher</h4>
-          <label for="shift">Shift by:</label>
-          <input type="number" id="shift" class="form-control" min=1 max=25>
-          <label>
-          <input type="radio" id="left" name="direction" value="left" checked> Left
-          </label>
-          <label>
-            <input type="radio" id="right" name="direction" value="right"> Right
-          </label>
-        </div>
+        <!-- vigenere -->
+          <div id="vigenere" class="cipher">
+            <div class="form-group">
+              <h4>Vigenere Cipher</h4>
+              <label for="vigenere-key">Key:</label>
+              <input type="text" id="vigenere-key" class="form-control">
+              <br>
+              <button type="button" id="vigenere-encode" class="btn">Vigenere Encode</button>
+              <button type="button" id="vigenere-decode" class="btn">Vigenere Decode</button>
+            </div>
+          </div>
 
-        <div class="action">
-          <label class="action">Action:</label>
-          <label>
-            <input type="radio" id="encode" name="action" value="encode" checked> Encode
-          </label>
+          <!-- foursquare -->
+          <div id="four-square" class="cipher">
+            <div class="form-group">
+              <h4>Four-Square Cipher</h4>
+              <label for="foursquare-key-1">Key 1:</label>
+              <input type="text" id="foursquare-key-1" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="foursquare-key-2">Key 2:</label>
+              <input type="text" id="foursquare-key-2" class="form-control">
+            </div>
+            <button type="button" id="foursquare-encode" class="btn">Four-Square Encode</button>
+            <button type="button" id="foursquare-decode" class="btn">Four-Square Decode</button>
+          </div>
 
-          <label>
-            <input type="radio" id="decode" name="action" value="decode"> Decode
-          </label>
-          <button type="submit" class="btn">Submit</button>
-        </div>
+        <!-- XOR -->
+          <div id = "xor">
+            <div class="form-group" class="cipher">
+              <h4>XOR Cipher</h4>
+              <label for="xor-key">XOR Key:</label>
+              <input type="text" id="xor-key" class="form-control">
+            </div>
+            <button type="button" id="xor-encode" class="btn">XOR Encode</button>
+            <button type="button" id="xor-decode" class="btn">XOR Decode</button>
+          </div>
 
+        <!-- Crypto -->
+      <div id="a-e-s-crypto" class="cipher">
         <div class="form-group">
-          <h4>Vigenere Cipher</h4>
-          <label for="vigenere-key">Key:</label>
-          <input type="text" id="vigenere-key" class="form-control">
+          <h4>AES Crypto</h4>
+          <label for="crypto-key">Crypto Key:</label>
+          <input type="text" id="crypto-key" class="form-control">
         </div>
-        <button type="button" id="vigenere-encode" class="btn">Vigenere Encode</button>
-        <button type="button" id="vigenere-decode" class="btn">Vigenere Decode</button>
-
-        <div class="form-group">
-          <h4>Four-Square Cipher</h4>
-          <label for="foursquare-key-1">Key 1:</label>
-          <input type="text" id="foursquare-key-1" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="foursquare-key-2">Key 2:</label>
-          <input type="text" id="foursquare-key-2" class="form-control">
-        </div>
-        <button type="button" id="foursquare-encode" class="btn">Four-Square Encode</button>
-        <button type="button" id="foursquare-decode" class="btn">Four-Square Decode</button>
-
-        <div class="form-group">
-          <h4>XOR Cipher</h4>
-          <label for="xor-key">XOR Key:</label>
-          <input type="text" id="xor-key" class="form-control">
-        </div>
-        <button type="button" id="xor-encode" class="btn">XOR Encode</button>
-        <button type="button" id="xor-decode" class="btn">XOR Decode</button>
-      </div>
-        
-        <div class="form-group">
-        <h4>Crypto Encryption</h4>
-        <label for="crypto-key">Crypto Key:</label>
-        <input type="text" id="crypto-key" class="form-control">
-      </div>
       <button type="button" id="crypto-encode" class="btn">Crypto Encode</button>
       <button type="button" id="crypto-decode" class="btn">Crypto Decode</button>
     </div>
 
+    </div>
 
-      <div class="col-sm-4">
-        <div class="form-group">
+
+      <!-- output -->
+        <div class="form-group col-sm-4">
           <label for="output">Output: </label>
           <textarea id="output" rows="14" class="form-control" readonly></textarea>
         </div>
-    </div>
-
       </form>
     </div>
-
-
   </body>
 </html>
