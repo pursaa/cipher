@@ -23,8 +23,9 @@
       <div class="jumbotron">
         <span class="blink-me">Substitution Ciphers</span>
       </div>
-      <h3>Explanation of what Ciphers are: </h3>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <h2>Explanation of what Ciphers are: </h2>
+      <p>In cryptography, a cipher (or cypher) is an algorithm for performing encryption or decryption—a series of well-defined steps that can be followed as a procedure. An alternative, less common term is encipherment. To encipher or encode is to convert information into cipher or code. In common parlance, "cipher" is synonymous with "code", as they are both a set of steps that encrypt a message; however, the concepts are distinct in cryptography, especially classical cryptography.</p>
+      <p> This page has five different ciphers': Caesar, Vigenere, Four-Square, Xor, and AES Crypto.  Press the button below to choose one and see what it does. </p>
       <br>
 
       <select class="ciphers">
@@ -33,7 +34,7 @@
         <option value="#vigenere">Vigenere Cipher</option>
         <option value="#four-square">Four Square Cipher</option>
         <option value="#xor">Xor Cipher</option>
-        <option value="#a-e-s-crypto">A-E-S-Crypto</option>
+        <option value="#a-e-s-crypto">AES Crypto</option>
       </select>
 
       <!-- input -->
@@ -48,8 +49,8 @@
           <div id="caesar-cipher" class="cipher">
             <div class="form-group caesar-cipher">
               <h4>Caesar Cipher</h4>
-              <label for="shift">Shift by:</label>
-              <input type="number" id="shift" class="form-control" min=1 max=25>
+              <label for="shift">Shift by:</label><br>
+              <input type="number" id="shift" class="form-control" min=1 max=25><br>
               <label>
               <input type="radio" id="left" name="direction" value="left" checked> Left
               <input type="radio" id="right" name="direction" value="right"> Right
@@ -90,8 +91,8 @@
               <label for="foursquare-key-2">Key 2:</label>
               <input type="text" id="foursquare-key-2" class="form-control">
             </div>
-            <button type="button" id="foursquare-encode" class="btn">Four-Square Encode</button>
-            <button type="button" id="foursquare-decode" class="btn">Four-Square Decode</button>
+            <button type="button" id="foursquare-encode" class="btn">4-Square Encode</button>
+            <button type="button" id="foursquare-decode" class="btn">4-Square Decode</button>
           </div>
 
         <!-- XOR -->
@@ -116,15 +117,20 @@
       <button type="button" id="crypto-decode" class="btn">Crypto Decode</button>
     </div>
 
+    <div>
+      <button type="button" id="qr" class="btn" onclick="qrClick()">QR Button</button>
     </div>
 
-
+    </div>
       <!-- output -->
         <div class="form-group col-sm-4">
           <label for="output">Output: </label>
           <textarea id="output" rows="14" class="form-control" readonly></textarea>
         </div>
+
       </form>
+      <div id="qrcode"></div>
+      </div>
     </div>
   </body>
 </html>
