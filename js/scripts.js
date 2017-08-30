@@ -72,6 +72,22 @@ $(document).ready(function(){
     $("#output").val(output);
     $("#input").val("");
   });
+  
+  $("#crypto-encode").click(function(){
+    var message = $("#input").val();
+    var key = $("#crypto-key").val();
+    var output = cryptoEncode(key, message);
+    $("#output").val(output);
+    $("#input").val("");
+  });
+
+  $("#crypto-decode").click(function(){
+    var message = $("#input").val();
+    var key = $("#crypto-key").val();
+    var output = cryptoDecode(key, message);
+    $("#output").val(output);
+    $("#input").val("");
+  });
 });
 
 function blinker() {
