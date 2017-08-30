@@ -97,6 +97,13 @@ $(document).ready(function(){
     $("#xor").hide();
     $(cipher).show();
     $('#qrcode').hide();
+    $('#qr').show();
+    if(cipher == "Choose a cipher"){
+      $("#qr").hide();
+    }
+
+
+
   });
 });
 
@@ -110,6 +117,7 @@ function qrClick() {
   $("#qrcode").html("");
   $('#qrcode').qrcode(input);
   $('#qrcode').show();
+
 }
 
 setInterval(blinker, 1000);

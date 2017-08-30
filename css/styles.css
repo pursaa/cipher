@@ -71,6 +71,7 @@ h1.action {
 
 #qr {
   margin: 6vh;
+  display: none;
 }
 .ciphers{
   background-color: #141414;
