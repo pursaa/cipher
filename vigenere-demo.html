@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/demo-styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/foursquare.js"></script>
+    <script src="js/xor.js"></script>
+    <script src="js/encode.js"></script>
+    <script src="js/decode.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/vigenere-demo.js"></script>
+    <title>Vigenere Cipher</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Vigenere Cipher</h1>
+      </div>
+      <div class="cipher-intro vigenere-intro">
+        <p>
+          The Vigenere Cipher is Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+
+      <div class="demo vigenere-demo">
+        <h2>Try it out:</h2>
+        <form id="vigenere-demo">
+          <label for="vigenere-demo-key">Key:</label>
+          <input type="text" id="vigenere-demo-key" class="form-control">
+        </form>
+        <button type="submit" class="btn">Encode!</button>
+      </div>
+
+      <div class="output">
+        <div class="vigenere-square">
+
+        </div>
+        <p>
+          Original Message: <span class="original-message"></span>
+        </p>
+        <p>
+          Cipher Message: &nbsp;&nbsp;<span class="cipher-message"></span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
