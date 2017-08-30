@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="js/foursquare.js"></script>
+      <script src="js/xor.js"></script>
+      <script src="js/encode.js"></script>
+      <script src="js/decode.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/demos.js"></script>
+      <title>Caesar Cipher</title>
+    </head>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Caesar Cipher</h1>
+      </div>
+      <div class="cipher-intro caesar-intro">
+        The Caesar Cipher is Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+      <div class="demo caesar-demo">
+        <form id=caesar-demo>
+          <div class="form-group">
+            <label for="shift">Shift by:</label>
+              <select id="demo-shift" class="form-control">
+              </select>
+            <label>
+              <input type="radio" id="demo-left" name="demo-direction" value="left" checked> Left
+            </label>
+            <label>
+              <input type="radio" id="demo-right" name="demo-direction" value="right"> Right
+            </label>
+          </div>
+        </form>
+        <div class="output">
+          <p class="original-alphabet"></p>
+          <p class="cipher-alphabet"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
