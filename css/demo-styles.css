@@ -1,3 +1,16 @@
+.vigenere-square p {
+  line-height: 22px;
+  margin: 0px;
+}
+
+.vigenere-square .line-0 span {
+  color: #386038;
+}
+
+.vigenere-square .first {
+  color: #386038;
+}
+
 .highlighted {
   color: white;
 }
