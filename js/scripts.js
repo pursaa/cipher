@@ -95,4 +95,9 @@ function blinker() {
     $('.blink-me').fadeIn(900);
 }
 
+// function makeCode(){
+//   var input = $("#text").val();
+//   $('#qrcode').qrcode(input);
+// }
+
 setInterval(blinker, 1000);
