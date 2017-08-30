@@ -21,30 +21,41 @@
       <div class="jumbotron">
         <span class="blink-me">Substitution Ciphers</span>
       </div>
-      <h3>Explanation of what Cipers are: </h3>
-        <input type=checkbox id="show">
-        <label for="show"><ul><span>Click here</span> to read about Caesar Cipher</ul></label>
-        <span id="content"><li>The action of a Caesar cipher is to replace each plaintext letter with a different one a fixed number of places down the alphabet.</li><label for="hide"><span></span> </label> </span></br>
-
+      <h3>Explanation of what Ciphers are: </h3>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <br>
       <form id="input-form" class="row">
         <div class="form-group col-sm-4">
           <label for="input">Input: </label>
           <textarea id="input" rows="14" class="form-control"></textarea>
         </div>
         <div class="col-sm-4">
+        <br>
 
-        <div class="form-group caesar-cipher">
+      <form>
+        <select class="ciphers">
+          <option value="caesar" selected="selected">Caesar Cipher</option>
+          <option value="vigenere">Vigenere Cipher</option>
+          <option value="foursquare">Four Square Cipher</option>
+        <option value="xor">Xor Cipher</option>
+      </select>
+      </form>
+      <div id="other">
+        Trigger the handler
+      </div>
+        <div class="cipher-group">
+        <div class="caesar-cipher">
+        <div class="form-group-caesar-cipher">
           <h4>Caesar Cipher</h4>
           <label for="shift">Shift by:</label>
           <input type="number" id="shift" class="form-control" min=1 max=25>
           <label>
           <input type="radio" id="left" name="direction" value="left" checked> Left
-          </label>
-          <label>
+          <!-- </label>
+          <label> -->
             <input type="radio" id="right" name="direction" value="right"> Right
           </label>
         </div>
-
         <div class="action">
           <label class="action">Action:</label>
           <label>
@@ -54,17 +65,21 @@
           <label>
             <input type="radio" id="decode" name="action" value="decode"> Decode
           </label>
+        </div>
           <button type="submit" class="btn">Submit</button>
         </div>
-
+        <div class="vigenere">
         <div class="form-group">
           <h4>Vigenere Cipher</h4>
           <label for="vigenere-key">Key:</label>
           <input type="text" id="vigenere-key" class="form-control">
+          <button type="button" id="vigenere-encode" class="btn">Vigenere Encode</button>
+          <button type="button" id="vigenere-decode" class="btn">Vigenere Decode</button>
         </div>
-        <button type="button" id="vigenere-encode" class="btn">Vigenere Encode</button>
-        <button type="button" id="vigenere-decode" class="btn">Vigenere Decode</button>
-
+<<<<<<< HEAD
+        </div>
+        <div class="four-square">
+>>>>>>> 1f0662ebe1a7107bb0b7b7f84960d977d99da411
         <div class="form-group">
           <h4>Four-Square Cipher</h4>
           <label for="foursquare-key-1">Key 1:</label>
@@ -85,8 +100,9 @@
         <button type="button" id="xor-encode" class="btn">XOR Encode</button>
         <button type="button" id="xor-decode" class="btn">XOR Decode</button>
       </div>
-
-
+<<<<<<< HEAD
+    </div>
+>>>>>>> 1f0662ebe1a7107bb0b7b7f84960d977d99da411
       <div class="col-sm-4">
         <div class="form-group">
           <label for="output">Output: </label>

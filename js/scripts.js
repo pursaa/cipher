@@ -72,6 +72,11 @@ $(document).ready(function(){
     $("#output").val(output);
     $("#input").val("");
   });
+
+  $(".ciphers").change(function() {
+    alert("Handler for .change() called.");
+  
+  });
 });
 
 function blinker() {
