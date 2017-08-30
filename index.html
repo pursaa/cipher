@@ -24,23 +24,21 @@
       <h3>Explanation of what Ciphers are: </h3>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       <br>
+      <!-- <select class="ciphers">
+        <option value="caesar" selected="selected">Caesar Cipher</option>
+        <option value="vigenere">Vigenere Cipher</option>
+        <option value="foursquare">Four Square Cipher</option>
+      <option value="xor">Xor Cipher</option>
+    </select>
+    <div id="other">
+      Trigger the handler
+    </div> -->
       <form id="input-form" class="row">
         <div class="form-group col-sm-4">
           <label for="input">Input: </label>
           <textarea id="input" rows="14" class="form-control"></textarea>
         </div>
         <div class="col-sm-4">
-        <select class="ciphers">
-          <option value="caesar" selected="selected">Caesar Cipher</option>
-          <option value="vigenere">Vigenere Cipher</option>
-          <option value="foursquare">Four Square Cipher</option>
-        <option value="xor">Xor Cipher</option>
-      </select>
-      <!-- </form> -->
-      <div id="other">
-        Trigger the handler
-      </div>
-        <div class="cipher-group">
         <div class="caesar-cipher">
         <div class="form-group-caesar-cipher">
           <h4>Caesar Cipher</h4>
@@ -48,11 +46,9 @@
           <input type="number" id="shift" class="form-control" min=1 max=25>
           <label>
           <input type="radio" id="left" name="direction" value="left" checked> Left
-          <!-- </label>
-          <label> -->
             <input type="radio" id="right" name="direction" value="right"> Right
           </label>
-        </div>
+        <!-- </div> -->
         <div class="action">
           <label class="action">Action:</label>
           <label>
@@ -65,6 +61,8 @@
         </div>
           <button type="submit" class="btn">Submit</button>
         </div>
+      </div>
+        <!-- vigenere -->
         <div class="vigenere">
         <div class="form-group">
           <h4>Vigenere Cipher</h4>
@@ -74,6 +72,7 @@
           <button type="button" id="vigenere-decode" class="btn">Vigenere Decode</button>
         </div>
         </div>
+        <!-- foursquare -->
         <div class="four-square">
         <div class="form-group">
           <h4>Four-Square Cipher</h4>
@@ -86,6 +85,9 @@
         </div>
         <button type="button" id="foursquare-encode" class="btn">Four-Square Encode</button>
         <button type="button" id="foursquare-decode" class="btn">Four-Square Decode</button>
+      </div>
+        <!-- XOR -->
+        <div class="xor">
         <div class="form-group">
           <h4>XOR Cipher</h4>
           <label for="xor-key">XOR Key:</label>
@@ -94,14 +96,13 @@
         <button type="button" id="xor-encode" class="btn">XOR Encode</button>
         <button type="button" id="xor-decode" class="btn">XOR Decode</button>
       </div>
-    </div>
-      <div class="col-sm-4">
-        <div class="form-group">
+      </div>
+      <div class="form-group col-sm-4">
           <label for="output">Output: </label>
           <textarea id="output" rows="14" class="form-control" readonly></textarea>
         </div>
-    </div>
-      </form>
+
+    </form>
     </div>
   </body>
 </html>
