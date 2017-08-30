@@ -24,9 +24,23 @@ function fillMessage(cipherFunction, shift, direction) {
   return result.join("");
 }
 
-function encodeMessage() {
-
+function highlightStep(counter) {
+  setTimeout(function() {
+    $(".original-message span:nth-child("+ counter + ")").addClass("highlighted");
+    counter++;
+    if (counter <= testMessage.length) {
+      highlightStep(counter);
+    }
+  }, 300);
 }
+
+function displayEncode() {
+  var counter = 1;
+  alert("got here");
+  highlightStep(counter);
+}
+
+
 
 $(document).ready(function() {
   fillShiftSelect();
@@ -40,5 +54,6 @@ $(document).ready(function() {
     var cipherMessage = fillMessage(encode, shift, direction);
     $(".cipher-alphabet").html(cipherAlpha);
     $(".cipher-message").html(cipherMessage);
+    displayEncode();
   });
 });
