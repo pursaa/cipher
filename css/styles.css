@@ -1,9 +1,9 @@
 h4 {
   margin-top: 20px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 35px;
+  text-decoration: underline;
 }
-
 body {
   background-color: black;
   color: #0f840f;
@@ -30,8 +30,8 @@ input[type=radio] {
 button[type=submit] {
   display: block;
   float: center;
-  width: 70px;
-  margin-left: 8vh;
+  width: 90px;
+  margin-left: 11vh;
 }
 
 h1.action {
@@ -45,9 +45,9 @@ h1.action {
 }
 
 .blink-me {
-  color: green;
+  color: #0f840f;
   background-color: black;
-  font-size: 45px;
+  font-size: 50px;
 }
 
 .jumbotron {
@@ -58,12 +58,11 @@ h1.action {
   border: 5px groove white;
   width: 140px;
   font-size: 18px;
-  text-align: left;
+  text-align: center;
 }
 
 #qrcode {
   background-color: white;
-  /*border: 1px solid white;*/
   text-align: center;
   padding: 5px;
   display:none;
@@ -71,22 +70,32 @@ h1.action {
 
 #qr {
   margin: 6vh;
-  display: none;
-}
-.ciphers{
-  background-color: #141414;
+  display: none
 }
 
-#output, #input {
-  background-color: #141414 ;
-  color: #0f840f;
-  color: gray;
+.ciphers {
+  background-color: #141414;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+select {
   font-size: 20px;
 }
 
+#output, #input {
+  background-color: #141414;
+  color:gray;
+  font-size: 20px;
+}
+.col-sm-4 {
+  text-align: center;
+}
+
 #shift, #vigenere-key, #foursquare-key-1, #foursquare-key-2, #xor-key, #crypto-key {
-  background-color: black;
-  color: #0f840f;
+  background-color: #141414;
+  color:gray;
   font-size: 20px;
 }
 

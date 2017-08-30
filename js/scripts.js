@@ -101,15 +101,12 @@ $(document).ready(function(){
     if(cipher == "Choose a cipher"){
       $("#qr").hide();
     }
-
-
-
   });
 });
 
 function blinker() {
     $('.blink-me').fadeOut(500);
-    $('.blink-me').fadeIn(900);
+    $('.blink-me').fadeIn(500);
 }
 
 function qrClick() {
