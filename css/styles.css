@@ -55,6 +55,8 @@ h1.action {
 }
 .btn {
   border: 5px groove white;
+  width: 140px;
+  padding: 10px
 }
 
 .ciphers{
