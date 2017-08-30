@@ -3,14 +3,6 @@
   margin: 0px;
 }
 
-.vigenere-square .line-0 span {
-  color: #216021;
-}
-
-.vigenere-square .first {
-  color: #216021;
-}
-
 .highlighted {
   color: white;
 }

@@ -16,7 +16,6 @@ function highlightAlphabet(charCode) {
   setTimeout(function() {
     $(".cipher-alphabet ." + charCode).addClass("highlighted");
   }, 1000);
-
 }
 
 // Print next letter of ciphertext, highlighted, then darken when we move on.
