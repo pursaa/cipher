@@ -2,6 +2,11 @@ h3 {
   text-align: center;
 }
 
+h3.key-letter {
+  text-align: left;
+  padding-left: 10em;
+}
+
 .y-axis {
   display: flex;
   align-items: center;

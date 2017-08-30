@@ -27,6 +27,7 @@ function rowHighlight(charCode) {
 }
 
 function highlightLetter(charCode, counter) {
+  $(".message-letter").addClass("highlighted");
   $(".original-message span:nth-child("+ counter + ")").addClass("highlighted");
   rowHighlight(charCode);
 }
@@ -39,11 +40,14 @@ function columnHighlight(keyCounter, key) {
 }
 
 function highlightKey(keyCounter, key) {
+  $(".message-letter").removeClass("highlighted");
+  $(".key-letter").addClass("highlighted");
   $(".vigenere-key span.key-" + keyCounter).addClass("highlighted");
   columnHighlight(keyCounter, key);
 }
 
 function highlightSquare(charCode, keyCounter, key) {
+  $(".key-letter").removeClass("highlighted");
   $("p." + charCode + " span:nth-child(" + (key.charCodeAt(keyCounter) - 95) + ")").addClass("highlighted");
 }
 
