@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/demo-styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="js/foursquare.js"></script>
+      <script src="js/xor.js"></script>
+      <script src="js/encode.js"></script>
+      <script src="js/decode.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/caesar-demo.js"></script>
+      <title>Caesar Cipher</title>
+    </head>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Caesar Cipher</h1>
+      </div>
+      <div class="cipher-intro caesar-intro">
+        <p>
+          The Caesar Cipher is a simple substitution cipher that replaces each letter in a message with a letter a set number of steps left or right in the alphabet. If you reach the end of the alphabet, you wrap around to the start, and vice versa if you reach the start; for example, if you shift left by 3, A becomes X, B becomes Y, and C becomes Z. To decode a Caesar Cipher, you simply shift the same number of steps in the opposite direction.
+        <p>
+        <p>Learn more about Caesar Ciphers <a href="https://en.wikipedia.org/wiki/Caesar_cipher">here</a>.</p>
+      </div>
+      <div class="demo caesar-demo">
+        <h2>Try it out:</h2>
+        <form id=caesar-demo>
+          <div class="form-group">
+            <label for="shift">Shift by:</label>
+              <select id="demo-shift" class="form-control">
+              </select>
+            <label>
+              <input type="radio" id="demo-left" name="demo-direction" value="left" checked> Left
+            </label>
+            <label>
+              <input type="radio" id="demo-right" name="demo-direction" value="right"> Right
+            </label>
+          </div>
+        </form>
+        <div class="output">
+          <p>
+            Original Alphabet: <span class="original-alphabet"></span>
+          </p>
+          <p>
+            Cipher Alphabet:  &nbsp;&nbsp;<span class="cipher-alphabet"></span>
+          </p>
+          <p>
+            Original Message: <span class="original-message"></span>
+          </p>
+          <p>
+            Cipher Message: &nbsp;&nbsp;<span class="cipher-message"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
