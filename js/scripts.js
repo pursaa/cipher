@@ -96,17 +96,25 @@ $(document).ready(function(){
     $(cipher).show();
     $("#xor").hide();
     $(cipher).show();
+    $('#qrcode').hide();
+    $('#qr').show();
+    if(cipher == "Choose a cipher"){
+      $("#qr").hide();
+    }
   });
 });
 
 function blinker() {
     $('.blink-me').fadeOut(500);
-    $('.blink-me').fadeIn(900);
+    $('.blink-me').fadeIn(500);
 }
 
-// function makeCode(){
-//   var input = $("#text").val();
-//   $('#qrcode').qrcode(input);
-// }
+function qrClick() {
+  var input = $("#output").val();
+  $("#qrcode").html("");
+  $('#qrcode').qrcode(input);
+  $('#qrcode').show();
+
+}
 
 setInterval(blinker, 1000);
