@@ -1,31 +1,10 @@
-// Want a different example message? Change it here!
-var testMessage = "Hello world!";
+var testMessage = "Hello World!"
 
 // Fills our select function with all shift values.
 function fillShiftSelect() {
   for (var i = 0; i < 26; i++) {
     $("#demo-shift").append("<option value='" + i + "'>" + i + "</option>")
   }
-}
-
-// Returns specified alphabet with each letter in labeled span.
-function fillAlphabet(cipherFunction, shift, direction) {
-  var result = "";
-  for (var i = 97; i < 123; i++) {
-    var code = cipherFunction(String.fromCharCode(i), shift, direction);
-    result += "<span class='letter-" + i + "'>" + code + " </span>";
-  }
-  return result;
-}
-
-// Returns specified ciphertext which each letter in labeled span.
-function fillMessage(cipherFunction, shift, direction) {
-  var codeMessage = cipherFunction(testMessage, shift, direction);
-  var result = codeMessage.split("").map(function(character) {
-    var charCode = character.toLowerCase().charCodeAt(0);
-    return "<span class=letter-"+ charCode + ">" + character + "</span>";
-  });
-  return result.join("");
 }
 
 // Hightlights/darkens correct letter in each alphabet at a delay.
@@ -37,7 +16,6 @@ function highlightAlphabet(charCode) {
   setTimeout(function() {
     $(".cipher-alphabet ." + charCode).addClass("highlighted");
   }, 1000);
-
 }
 
 // Print next letter of ciphertext, highlighted, then darken when we move on.
@@ -94,14 +72,14 @@ $(document).ready(function() {
   // Sets up page, saving us lots of typing.
   fillShiftSelect();
   $(".original-alphabet, .cipher-alphabet").html(fillAlphabet(encode, 0, "left"));
-  $(".original-message, .cipher-message").html(fillMessage(encode, 0, "left"));
+  $(".original-message, .cipher-message").html(fillMessage(testMessage, encode, 0, "left"));
 
   // Any time our Caesar Cipher settings change, refresh our content.
   $("#demo-shift, input[name=demo-direction]").change(function() {
     var shift = $("#demo-shift").val();
     var direction = $("[name=demo-direction]:checked").val();
     var cipherAlpha = fillAlphabet(encode, shift, direction);
-    var cipherMessage = fillMessage(encode, shift, direction);
+    var cipherMessage = fillMessage(testMessage, encode, shift, direction);
 
     $(".cipher-alphabet").html(cipherAlpha);
     $(".cipher-message").html("");
