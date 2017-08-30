@@ -24,8 +24,9 @@ function fillMessage(cipherFunction, shift, direction) {
   return result.join("");
 }
 
-function highlightStep(counter) {
+function highlightMessage(counter) {
   setTimeout(function() {
+    $(".original-message span:nth-child("+ (counter - 1)+ ")").removeClass("highlighted");
     $(".original-message span:nth-child("+ counter + ")").addClass("highlighted");
     counter++;
     if (counter <= testMessage.length) {
@@ -36,7 +37,6 @@ function highlightStep(counter) {
 
 function displayEncode() {
   var counter = 1;
-  alert("got here");
   highlightStep(counter);
 }
 
