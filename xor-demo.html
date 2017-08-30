@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/demo-styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/foursquare.js"></script>
+  <script src="js/xor.js"></script>
+  <script src="js/encode.js"></script>
+  <script src="js/decode.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/demos.js"></script>
+  <script src="js/xor-demo.js"></script>
+  <title>XOR Cipher</title>
+</head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>XOR Cipher</h1>
+      </div>
+      <div class="cipher-intro xor-intro">
+        <p>
+          The XOR cipher Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="demo xor-demo">
+        <h2>Watch it work:</h2>
+        <div class="row">
+          <div class="col-sm-3">
+            <p>
+              Message: <span class="original-message">Hello</span>
+            </p>
+            <p>
+              Key: <span class="xor-key">World</span>
+            </p>
+            <button type="button" id="xor-encode">Encode</button>
+          </div>
+          <div class="col-sm-9">
+            <p>
+              Message Binary: <span class="binary-message">0100100001100101011011000110110001101111</span>
+            </p>
+            <p>
+              Key Binary: &nbsp;&nbsp;&nbsp;&nbsp;<span class="binary-key">0101011101101111011100100110110001100100</span>
+            </p>
+            <p>
+              Cipher Binary: &nbsp;<span class="cipher-binary"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
