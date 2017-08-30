@@ -1,31 +1,8 @@
-// Want a different example message? Change it here!
-var testMessage = "Hello world!";
-
 // Fills our select function with all shift values.
 function fillShiftSelect() {
   for (var i = 0; i < 26; i++) {
     $("#demo-shift").append("<option value='" + i + "'>" + i + "</option>")
   }
-}
-
-// Returns specified alphabet with each letter in labeled span.
-function fillAlphabet(cipherFunction, shift, direction) {
-  var result = "";
-  for (var i = 97; i < 123; i++) {
-    var code = cipherFunction(String.fromCharCode(i), shift, direction);
-    result += "<span class='letter-" + i + "'>" + code + " </span>";
-  }
-  return result;
-}
-
-// Returns specified ciphertext which each letter in labeled span.
-function fillMessage(cipherFunction, shift, direction) {
-  var codeMessage = cipherFunction(testMessage, shift, direction);
-  var result = codeMessage.split("").map(function(character) {
-    var charCode = character.toLowerCase().charCodeAt(0);
-    return "<span class=letter-"+ charCode + ">" + character + "</span>";
-  });
-  return result.join("");
 }
 
 // Hightlights/darkens correct letter in each alphabet at a delay.
