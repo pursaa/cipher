@@ -22,7 +22,13 @@
       </div>
       <div class="cipher-intro vigenere-intro">
         <p>
-          The Vigenere Cipher is Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          The Vigenere Cipher is a more complex substitution cipher that uses multiple Caesar Ciphers to encode a message. The Cipher is given a key, and the letters of the key are used to determine the Caesar shift used for each letter of the message, with the first letter of the key applying to the first letter of the message and so on.
+        </p>
+        <p>
+          The Vigenere Cipher can be visualized as a 26 by 26 grid, with each row and column showing the Caesar-shifted alphabet corresponding to its first letter. The cipher character is located where the key letter's column and message letter's row intersect.
+        </p>
+        <p>
+          Learn more about Vigenere Ciphers <a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">here</a>.
         </p>
       </div>
 
@@ -36,6 +42,15 @@
       </div>
 
       <div class="output">
+        <p>
+          Key: <span class="vigenere-key"></span>
+        </p>
+        <p>
+          Original Message: <span class="original-message"></span>
+        </p>
+        <p>
+          Cipher Message: &nbsp;&nbsp;<span class="cipher-message"></span>
+        </p>
         <div class="row">
           <div class="col-sm-3 y-axis">
             <h3 class="message-letter">Message Letter</h3>
@@ -47,16 +62,6 @@
             </div>
           </div>
         </div>
-
-        <p>
-          Key: <span class="vigenere-key"></span>
-        </p>
-        <p>
-          Original Message: <span class="original-message"></span>
-        </p>
-        <p>
-          Cipher Message: &nbsp;&nbsp;<span class="cipher-message"></span>
-        </p>
       </div>
     </div>
   </body>
