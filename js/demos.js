@@ -1,4 +1,4 @@
-var testMessage = "The quick brown fox jumps over the lazy dog.";
+var testMessage = "Hello world!";
 
 function fillShiftSelect() {
   for (var i = 0; i < 26; i++) {
@@ -35,22 +35,44 @@ function highlightAlphabet(charCode) {
 
 }
 
-function highlightMessage(counter) {
+function displayCipher(cipherMessage, index) {
+  var cipherArray = cipherMessage.split("</span>");
+  setTimeout(function() {
+    $(".cipher-message").append(cipherArray[index] + "</span>");
+    $(".cipher-message span").last().addClass("highlighted");
+    setTimeout(function() {
+      $(".cipher-message span").last().removeClass("highlighted");
+    }, 500);
+  }, 1500);
+}
+
+function highlightDisplay(cipherMessage, counter) {
+  var delay;
+  if (counter === 1) {
+    delay = 500
+  } else {
+    delay = 2000;
+  }
   setTimeout(function() {
     $(".original-message span:nth-child("+ (counter - 1)+ ")").removeClass("highlighted");
     var charCode = $(".original-message span:nth-child("+ counter + ")").attr("class");
     $(".original-message span:nth-child("+ counter + ")").addClass("highlighted");
     highlightAlphabet(charCode);
+    displayCipher(cipherMessage, counter - 1);
     counter++;
     if (counter <= testMessage.length) {
-      highlightMessage(counter);
+      highlightDisplay(cipherMessage, counter);
+    } else {
+      setTimeout(function() {
+        $(".original-message span").removeClass("highlighted");
+      }, 2000);
     }
-  }, 1500);
+  }, delay);
 }
 
 function displayEncode(cipherMessage) {
   var counter = 1;
-  highlightMessage(counter);
+  highlightDisplay(cipherMessage, counter);
 }
 
 $(document).ready(function() {
@@ -65,6 +87,7 @@ $(document).ready(function() {
     var cipherMessage = fillMessage(encode, shift, direction);
 
     $(".cipher-alphabet").html(cipherAlpha);
+    $(".cipher-message").html("");
     displayEncode(cipherMessage);
   });
 });
