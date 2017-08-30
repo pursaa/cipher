@@ -67,7 +67,14 @@ border-style: dashed;
 border-color: white;
 }
 
-#output, #input, #shift, #vigenere-key, #foursquare-key-1, #foursquare-key-2 {
+#output, #input {
+  background-color: #141414 ;
+  color: #0f840f;
+  color: gray;
+  font-size: 20px;
+}
+
+#shift, #vigenere-key, #foursquare-key-1, #foursquare-key-2, #xor-key {
   background-color: black;
   color: #0f840f;
   font-size: 20px;
