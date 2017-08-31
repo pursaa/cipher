@@ -113,11 +113,12 @@ $(document).ready(function() {
 
   $("#vigenere-demo").submit(function(event) {
     event.preventDefault();
+    $(".error-message").text("");
 
     var key = $("#vigenere-demo-key").val();
     var code = encodeVigenere(key, testMessage);
     if (code.includes("Error")) {
-      alert("Please Enter a Valid Key");
+      $(".error-message").text("Invalid Key");
     } else {
       $(".cipher-message").text("");
       $(".vigenere-key").html(makeVigenereKey(key));
