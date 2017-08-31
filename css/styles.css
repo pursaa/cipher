@@ -142,7 +142,7 @@ li {
 }
 
 #navbarSupportedContent {
-  margin-left: -5%;
+  /*margin-left: 0%;*/
 }
 
 .nav-link {
