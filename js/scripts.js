@@ -128,13 +128,6 @@ $(document).ready(function(){
     var message = $("#input").val();
     var key = $("#crypto-key").val();
     var output = cryptoDecode(key, message);
-<<<<<<< HEAD
-    $("#output").val(output);
-    $("#input").val("");
-  });
-
-  $(".ciphers").change(function() {
-=======
     if (output.includes("Error:")) {
       printError(output);
     } else {
@@ -145,7 +138,6 @@ $(document).ready(function(){
 
   $(".ciphers").change(function() {
     clearError();
->>>>>>> 7e6ed312e654c639ddfcda4e73d8d703ea295514
     var cipher = $(".ciphers").val();
     $(".cipher").hide();
     $(cipher).show();
