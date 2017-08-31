@@ -16,6 +16,29 @@
       <div class="jumbotron">
         <h1>Advanced Encryption Standard (AES)</h1>
       </div>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home Page <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="caesar-demo.html">Caesar Demo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="vigenere-demo.html">Vigenere Demo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="foursquare-demo.html">Four Square</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="xor-demo.html">Xor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="AES-demo.html">AES</a>
+          </ul>
+        </div>
+      </nav>
       <div class="cipher-intro aes-intro">
         <p>
           AES comprises three block ciphers: AES-128, AES-192 and AES-256. Each cipher encrypts and decrypts data in blocks of 128 bits using cryptographic keys of 128-, 192- and 256-bits, respectively. The Rijndael cipher was designed to accept additional block sizes and key lengths, but for AES, those functions were not adopted.
@@ -30,7 +53,7 @@
           The first transformation in the AES encryption cipher is substitution of data using a substitution table; the second transformation shifts data rows, the third mixes columns. The last transformation is a simple exclusive or (XOR) operation performed on each column using a different part of the encryption key -- longer keys need more rounds to complete.
         </p>
         <p>
-          Learn more about AES <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">here</a>.
+          Learn more about AES <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" class="wiki-link">here</a>.
         </p>
       </div>
     </div>

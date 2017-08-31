@@ -45,12 +45,12 @@ h3.key-letter {
 
 #vigenere-demo-key{
   background-color: #141414;
-  color: lightgreen;
+  color: gray;
   font-size: 25px;
 }
 
 .wiki-link {
-  color: lightgreen;
+  color: gray;
 }
 
 .foursquare-demo {

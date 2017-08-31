@@ -55,8 +55,8 @@ h1.action {
   text-align: center;
 }
 .btn {
-  border: 5px groove darkgreen;
-  background-color: #bbe2b5;
+  border: 5px groove gray;
+  /*background-color: #bbe2b5;*/
   width: 140px;
   font-size: 18px;
   text-align: center;
@@ -81,11 +81,10 @@ h1.action {
 }
 
 .ciphers {
-  /*background-color: #141414;*/
+  background-color: #141414;
   border-style: groove;
-  border-color: green ;
+  border-color: gray;
   border-width: 5px;
-  background-color: lightgreen;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -99,8 +98,9 @@ select {
   background-color: #141414;
   color:gray;
   font-size: 20px;
-  border: 2px groove #bbe2b5;
+  border: 2px groove;
 }
+
 .col-sm-4 {
   text-align: center;
 }
@@ -131,9 +131,9 @@ li {
   list-style: none;
   margin-right: 10px;
   border-style: groove;
-  border-color: green ;
+  border-color: gray;
   border-width: 5px;
-  background-color: lightgreen;
+  background-color: lightgray;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
@@ -147,4 +147,8 @@ li {
 
 .nav-link {
   color: green;
+}
+
+.wiki-link {
+  color: gray;
 }
