@@ -24,7 +24,7 @@ $(document).ready(function(){
   $("#vigenere-encode").click(function() {
     var key = $("#vigenere-key").val();
     var message = $("#input").val();
-    var output = encodeVigenere(key, message, "decode");
+    var output = encodeVigenere(key, message);
     $("#output").val(output);
     $("#input").val("");
   });
@@ -32,7 +32,7 @@ $(document).ready(function(){
   $("#vigenere-decode").click(function() {
     var key = $("#vigenere-key").val();
     var message = $("#input").val();
-    var output = decodeVigenere(key, message, "decode");
+    var output = decodeVigenere(key, message,);
     $("#output").val(output);
     $("#input").val("");
   });
@@ -112,7 +112,6 @@ function qrClick() {
   $("#qrcode").html("");
   $('#qrcode').qrcode(input);
   $('#qrcode').show();
-
 }
 
 setInterval(blinker, 1000);
