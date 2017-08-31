@@ -65,12 +65,17 @@ h1.action {
   background-color: white;
   text-align: center;
   padding: 5px;
-  display:none;
+  display: none;
+  border-style: solid;
+  border-color: white;
+  width: 275px;
+  margin-left: 38%;
 }
 
 #qr {
   margin: 6vh;
   display: none
+  color: #0f840f;
 }
 
 .ciphers {
@@ -105,4 +110,33 @@ select {
 
 p {
     text-indent: 50px;
+}
+
+li {
+  list-style: none;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: gray;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  width: 160px;
+}
+
+#navbarSupportedContent {
+  margin-left: -5%;
+}
+
+#vigenere-btn {
+  margin-left: 0%;
+}
+
+#vigenere-demo-key {
+  width: 30%;
+}
+
+#demo-shift{
+  width: 30%;
+  font-size: 22px;
+  font-weight: bold;
 }

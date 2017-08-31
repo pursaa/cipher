@@ -20,6 +20,21 @@
       <div class="jumbotron">
         <h1>Vigenere Cipher</h1>
       </div>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home Page <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="caesar-demo.html">Caesar Demo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="vigenere-demo.html">Vigenere Demo</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <div class="cipher-intro vigenere-intro">
         <p>
           The Vigenere Cipher is a more complex substitution cipher that uses multiple Caesar Ciphers to encode a message. The Cipher is given a key, and the letters of the key are used to determine the Caesar shift used for each letter of the message, with the first letter of the key applying to the first letter of the message and so on.
@@ -37,10 +52,11 @@
         <form id="vigenere-demo">
           <label for="vigenere-demo-key">Key:</label>
           <input type="text" id="vigenere-demo-key" class="form-control">
-          <button type="submit" class="btn">Encode!</button>
+          <br>
+          <button type="submit" class="btn" id="vigenere-btn">Encode!</button>
         </form>
       </div>
-
+      <br>
       <div class="output">
         <p>
           Key: <span class="vigenere-key"></span>
