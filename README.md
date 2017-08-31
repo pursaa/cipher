@@ -197,15 +197,19 @@ This webpage is available to view on GitHub pages at [langlk.github.io/substitut
 
 ## Known Bugs
 
-_No known bugs at this time_
+_No known bugs at this time._
 
 ## Support and contact details
 
-_If you run into any issues or have questions, ideas or concerns please contact Kelsey Langlois at [@gmail.com]; Linda Luu at kels.langlois@gmail.com; Rafael Furry at [@gmail.com]; Debbie Michel at [debbiemichel1633@gmail.com].  You are more then welcome to play with the code and change it in anyway you wish_
+_If you run into any issues or have questions, ideas or concerns please contact Kelsey Langlois at [@gmail.com]; Linda Luu at kels.langlois@gmail.com; Rafael Furry at [@gmail.com]; Debbie Michel at [debbiemichel1633@gmail.com]. You are welcome to fork this repository and contribute to the code._
 
 ## Technologies Used
 
-_This program was written using html, css, javascript, bootstrap and jQuery._
+* JavaScript
+* jQuery
+* HTML
+* CSS
+* Bootstrap
 
 ### License
 
