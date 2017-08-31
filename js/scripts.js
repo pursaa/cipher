@@ -65,8 +65,12 @@ $(document).ready(function(){
     var key2 = $("#foursquare-key-2").val();
     var message = $("#input").val();
     var output = encodeFourSquare(key1, key2, message);
-    $("#output").val(output);
-    $("#input").val("");
+    if (output.includes("Error:")) {
+      printError(output);
+    } else {
+      $("#output").val(output);
+      $("#input").val("");
+    }
   });
 
   $("#foursquare-decode").click(function(){
@@ -75,8 +79,12 @@ $(document).ready(function(){
     var key2 = $("#foursquare-key-2").val();
     var message = $("#input").val();
     var output = decodeFourSquare(key1, key2, message);
-    $("#output").val(output);
-    $("#input").val("");
+    if (output.includes("Error:")) {
+      printError(output);
+    } else {
+      $("#output").val(output);
+      $("#input").val("");
+    }
   });
 
   $("#xor-encode").click(function(){
