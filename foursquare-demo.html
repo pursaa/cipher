@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/demo-styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/foursquare.js"></script>
+  <script src="js/xor.js"></script>
+  <script src="js/encode.js"></script>
+  <script src="js/decode.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/demos.js"></script>
+  <title>Four-Square Cipher</title>
+</head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Four-Square Cipher</h1>
+      </div>
+      <div class="cipher-intro foursquare-intro">
+        <p>
+          The Four-Square Cipher is a substitution cipher that encrypts pairs of letters at a time. The cipher is represented by four 5x5 grids. Two keywords are used to create ciphertext squares, and the other grids are filled with the plaintext alphabet. To make the alphabet fit, the cipher either combines I and J into one letter, or removes Q from the alphabet (Our implementation does the latter). The position of the two letter in a plaintext pair is used to determine the ciphertext letters that replace them; this is done by creating a rectangle with the plaintext letters as two corners, and using the letters at the other corners as the ciphertext letters (See the example below). Decoding the message simply reverses the process.
+        </p>
+        <p>
+          The Four-Square cipher is more secure than a substituion cipher that encrypts single letters at a time, since there are 676 possible pairs of letters to look for instead of 26 possible single letters. However, it can still be broken if there is enough text to analyze.
+        </p>
+        <p>
+          Learn more about Four-Square ciphers <a href="https://en.wikipedia.org/wiki/Four-square_cipher">here</a>.</p>
+      </div>
+      <div class="demo foursquare-demo">
+        
+      </div>
+    </div>
+  </body>
+</html>
