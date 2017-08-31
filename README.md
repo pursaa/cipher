@@ -6,7 +6,9 @@
 
 ## Description
 
-_This program will run several different ciphers. First on is Caesar cipher.  The user will choose how many characters to shift each letter in the word, whether to shift the letters left or right and whether to encode or decode the word. The user will type a word in the input box and press the submit button.  There is an option button to display a QR code.  The second choice is Vigenere cipher.  The user will type in a word, then type in a keyword, press the encode or decode button.  The third choice is Four-Square cipher.  The user will have two key words to input and a encode and decode button. Then there is the XOR cipher and the user will type in a key word along with the input word; choose to encode or decode.  Encode will change the words to numbers and decode can change them back.  The last one is the AES cipher.  Again the user inputs a word and a key word and presses the number for encode.  The decode will unencrypt the code. There is an option button to display a QR code (bar code)for all the ciphers. _
+_This program will run several different ciphers. First on is Caesar cipher.  The user will choose how many characters to shift each letter in the word, whether to shift the letters left or right and whether to encode or decode the word. The user will type a word in the input box and press the submit button.  There is an option button to display a QR code.  The second choice is Vigenere cipher.  The user will type in a word, then type in a keyword, press the encode or decode button.  The third choice is Four-Square cipher.  The user will have two key words to input and a encode and decode button. Then there is the XOR cipher and the user will type in a key word along with the input word; choose to encode or decode.  Encode will change the words to numbers and decode can change them back.  The last one is the AES cipher.  Again the user inputs a word and a key word and presses the number for encode.  The decode will unencrypt the code. There is an option button to display a QR code (bar code)for all the ciphers
+
+There are tabs to take you to the demos and ciphers explanations. _
 
 ## Specifications
 
@@ -139,11 +141,13 @@ _This program will run several different ciphers. First on is Caesar cipher.  Th
 
 * _Clone the substitution ciphers _
 * _Open the index.html_
+* _The home page is where you will play with the different ciphers_
 * _Choose a cipher from the drop down box in the center of the page_
 * _Enter a word in the input box_
-* _Ener a key word or shift directions depending on the cipher you are using_
+* _Enter a key word or shift directions depending on the cipher you are using_
 * _Hit the encode or decode button_
 * _Hit the QR button to see the bar code_
+# _The tabs at the top of the page will take you to the different demos_
 
 
 ## Known Bugs
