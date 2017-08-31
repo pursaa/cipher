@@ -12,7 +12,6 @@
   <script src="js/decode.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/demos.js"></script>
-  <script src="js/xor-demo.js"></script>
   <title>XOR Cipher</title>
 </head>
   <body>
@@ -22,33 +21,13 @@
       </div>
       <div class="cipher-intro xor-intro">
         <p>
-          The XOR cipher Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          The XOR Cipher opereates on the bits that make up a message and key, running a simple binary "exclusive or" (XOR) on them. This means that if two corresponding bits are the same, the resulting bit is 0, and if two corresponding bits are different, the resulting bit is 1. The result after all bits have been XORed is the ciphertext. Decoding the message simply involves running another binary XOR on the key and ciphertext.
         </p>
-      </div>
-      <div class="demo xor-demo">
-        <h2>Try it out:</h2>
-        <div class="row">
-          <div class="col-sm-3">
-            <p>
-              Message: <span class="original-message">Hello</span>
-            </p>
-            <p>
-              Key: <span class="xor-key">World</span>
-            </p>
-            <button type="button" id="xor-encode" class="btn">Encode</button>
-          </div>
-          <div class="col-sm-9">
-            <p>
-              Message Binary: <span class="binary-message"></span>
-            </p>
-            <p>
-              Key Binary: &nbsp;&nbsp;&nbsp;&nbsp;<span class="binary-key"></span>
-            </p>
-            <p>
-              Cipher Binary: &nbsp;<span class="cipher-binary"></span>
-            </p>
-          </div>
-        </div>
+        <p>
+          XOR Ciphers can be broken more than one way, unless they use a one-time pad. This special case requires that the key be completely random, the same length as the message, and (as the name suggests) only used once. Provided only the sender and receiver have the pad, the encoded message is truly secure.
+        </p>
+        <p>
+          Learn more about XOR ciphers <a href="https://en.wikipedia.org/wiki/XOR_cipher">here</a>.</p>
       </div>
     </div>
   </body>
