@@ -71,15 +71,15 @@ function displayEncode(cipherMessage) {
 $(document).ready(function() {
   // Sets up page, saving us lots of typing.
   fillShiftSelect();
-  $(".original-alphabet, .cipher-alphabet").html(fillAlphabet(encode, 0, "left"));
-  $(".original-message, .cipher-message").html(fillMessage(testMessage, encode, 0, "left"));
+  $(".original-alphabet, .cipher-alphabet").html(fillAlphabet(caesarShift, 0, "left"));
+  $(".original-message, .cipher-message").html(fillMessage(testMessage, caesarShift, 0, "left"));
 
   // Any time our Caesar Cipher settings change, refresh our content.
   $("#demo-shift, input[name=demo-direction]").change(function() {
     var shift = $("#demo-shift").val();
     var direction = $("[name=demo-direction]:checked").val();
-    var cipherAlpha = fillAlphabet(encode, shift, direction);
-    var cipherMessage = fillMessage(testMessage, encode, shift, direction);
+    var cipherAlpha = fillAlphabet(caesarShift, shift, direction);
+    var cipherMessage = fillMessage(testMessage, caesarShift, shift, direction);
 
     $(".cipher-alphabet").html(cipherAlpha);
     $(".cipher-message").html("");
