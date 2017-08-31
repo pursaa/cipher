@@ -1,5 +1,5 @@
-// left shifts a given letter by "shift" amount.
-function encodeLetter(letter, shift, direction) {
+// shifts a given letter by "shift" amount in "direction" direction.
+function caesarLetter(letter, shift, direction) {
   if (direction === "right") {
     shift = -shift;
   }
@@ -22,11 +22,11 @@ function encodeLetter(letter, shift, direction) {
 }
 
 // left shifts a given message by "shift" amount.
-function encode(message, shift, direction) {
+function caesarShift(message, shift, direction) {
   var messageArray = message.split("");
   var result = "";
   messageArray.forEach(function(letter){
-    result += encodeLetter(letter, shift, direction);
+    result += caesarLetter(letter, shift, direction);
   });
   return result;
 }

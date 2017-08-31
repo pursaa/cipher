@@ -9,15 +9,13 @@ $(document).ready(function(){
     if (shift > 0 && shift < 26) {
       var output;
       if (action === "encode") {
-        output = encode(message, shift, direction);
-        $("#output").val(output);
-        $("#input").val("");
+        output = caesarShift(message, shift, direction);
       } else {
         direction = directions[(directions.indexOf(direction) + 1) % 2];
-        output = decode(message, direction, shift);
-        $("#output").val(output);
-        $("#input").val("");
+        output = caesarShift(message, shift, direction);
       }
+      $("#output").val(output);
+      $("#input").val("");
     } else {
       alert("Please enter a valid number to shift.");
     }
