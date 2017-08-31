@@ -8,8 +8,7 @@ function cryptoDecode(key, message){
   if(message.startsWith("U2F")){
     var decrypted = CryptoJS.AES.decrypt(message, key);
     return decrypted.toString(CryptoJS.enc.Utf8);
-  }
-  else{
-    return "Please enter a valid AES crypto code";
+  } else {
+    return "Error: Invalid AES crypto code";
   }
 }

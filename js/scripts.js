@@ -92,8 +92,12 @@ $(document).ready(function(){
     var message = $("#input").val();
     var key = $("#xor-key").val();
     var output = xor(key, message);
-    $("#output").val(output);
-    $("#input").val("");
+    if (output.includes("Error:")) {
+      printError(output);
+    } else {
+      $("#output").val(output);
+      $("#input").val("");
+    }
   });
 
   $("#xor-decode").click(function(){
@@ -101,8 +105,12 @@ $(document).ready(function(){
     var message = $("#input").val();
     var key = $("#xor-key").val();
     var output = xorDecode(key, message);
-    $("#output").val(output);
-    $("#input").val("");
+    if (output.includes("Error:")) {
+      printError(output);
+    } else {
+      $("#output").val(output);
+      $("#input").val("");
+    }
   });
 
   $("#crypto-encode").click(function(){
@@ -112,6 +120,7 @@ $(document).ready(function(){
     var output = cryptoEncode(key, message);
     $("#output").val(output);
     $("#input").val("");
+
   });
 
   $("#crypto-decode").click(function(){
@@ -119,9 +128,12 @@ $(document).ready(function(){
     var message = $("#input").val();
     var key = $("#crypto-key").val();
     var output = cryptoDecode(key, message);
-    $("#output").val(output);
-    $("#input").val("");
-
+    if (output.includes("Error:")) {
+      printError(output);
+    } else {
+      $("#output").val(output);
+      $("#input").val("");
+    }
   });
 
   $(".ciphers").change(function() {

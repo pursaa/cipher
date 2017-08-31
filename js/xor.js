@@ -20,7 +20,7 @@ function xorDecode(key, message){
                         }
                 }
         } else {
-                output = "Please enter valid hex code";
+                output = "Error: Invalid hex code";
         }
         return output;
 }
