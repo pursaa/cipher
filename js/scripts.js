@@ -24,7 +24,7 @@ $(document).ready(function(){
   $("#vigenere-encode").click(function() {
     var key = $("#vigenere-key").val();
     var message = $("#input").val();
-    var output = encodeVigenere(key, message);
+    var output = encodeVigenere(key, message, "decode");
     $("#output").val(output);
     $("#input").val("");
   });
@@ -32,7 +32,7 @@ $(document).ready(function(){
   $("#vigenere-decode").click(function() {
     var key = $("#vigenere-key").val();
     var message = $("#input").val();
-    var output = decodeVigenere(key, message);
+    var output = decodeVigenere(key, message, "decode");
     $("#output").val(output);
     $("#input").val("");
   });
