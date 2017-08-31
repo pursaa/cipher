@@ -82,3 +82,15 @@ FourSquare.prototype.decode = function(message) {
     return result;
   }
 }
+
+function encodeFourSquare(key1, key2, message) {
+  var cipher = new FourSquare(key1, key2);
+  var result = cipher.encode(message);
+  return result;
+}
+
+function decodeFourSquare(key1, key2, message) {
+  var cipher = new FourSquare(key1, key2);
+  var result = cipher.decode(message);
+  return result;
+}
