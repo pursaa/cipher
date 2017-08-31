@@ -68,7 +68,7 @@
             </div>
           </div>
 
-        <!-- vigenere -->
+          <!-- vigenere -->
           <div id="vigenere" class="cipher">
             <div class="form-group">
               <h4>Vigenere Cipher</h4>
@@ -95,7 +95,7 @@
             <button type="button" id="foursquare-decode" class="btn">4-Square Decode</button>
           </div>
 
-        <!-- XOR -->
+          <!-- XOR -->
           <div id = "xor">
             <div class="form-group" class="cipher">
               <h4>XOR Cipher</h4>
@@ -106,29 +106,28 @@
             <button type="button" id="xor-decode" class="btn">XOR Decode</button>
           </div>
 
-        <!-- Crypto -->
-      <div id="a-e-s-crypto" class="cipher">
-        <div class="form-group">
-          <h4>AES Crypto</h4>
-          <label for="crypto-key">Crypto Key:</label>
-          <input type="text" id="crypto-key" class="form-control">
+          <!-- Crypto -->
+          <div id="a-e-s-crypto" class="cipher">
+            <div class="form-group">
+              <h4>AES Crypto</h4>
+              <label for="crypto-key">Crypto Key:</label>
+              <input type="text" id="crypto-key" class="form-control">
+            </div>
+            <button type="button" id="crypto-encode" class="btn">Crypto Encode</button>
+            <button type="button" id="crypto-decode" class="btn">Crypto Decode</button>
+          </div>
+
+          <div>
+            <button type="button" id="qr" class="btn" onclick="qrClick()">QR Button</button>
+          </div>
         </div>
-      <button type="button" id="crypto-encode" class="btn">Crypto Encode</button>
-      <button type="button" id="crypto-decode" class="btn">Crypto Decode</button>
-    </div>
-
-    <div>
-      <button type="button" id="qr" class="btn" onclick="qrClick()">QR Button</button>
-    </div>
-
-    </div>
-      <!-- output -->
+        <!-- output -->
         <div class="form-group col-sm-4">
           <label for="output">Output: </label>
           <textarea id="output" rows="14" class="form-control" readonly></textarea>
         </div>
-
       </form>
+      
       <div id="qrcode"></div>
       </div>
     </div>
