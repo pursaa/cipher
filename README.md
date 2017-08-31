@@ -30,7 +30,7 @@
   * **Example Output:** ""
 * The program does not allow non-alphabetical characters in its key.
   * **Example Input:** "1235!"
-  * **Example Output:** "Error: Invalid Key"
+  * **Example Output:** "Invalid Key"
 * The program turns a single letter key into a number from 0-25 based on its order in the alphabet.
   * **Example Input:** "E"
   * **Example Output:** 4
@@ -54,9 +54,12 @@
 ### Four-Square Cipher
 #### Encode
 
-* The program returns empty strings for non-alphabet characters and qs.
-  * **Example Input:** "123Q!!!"
-  * **Example Output:** ""
+* The program does not allow non-alphabet characters in keys.
+  * **Example Input:** Key="123Q!!!"
+  * **Example Output:** "Invalid Key"
+* The program returns empty strings for non-alphabet characters and qs in message.
+  * **Example Input:** Message="123Q!!!"
+  * **Example Output:** Message=""
 * The program downcases the entire key.
   * **Example Input:** "Hello"
   * **Example Output:** "hello"
@@ -107,31 +110,63 @@
 
 #### Decode
 
-* Program takes a ciphertext and breaks into 2-letter chunks.
+* The program takes a ciphertext and breaks into 2-letter chunks.
   * **Example Input:** "fygmkyhobxmfkkkimd"
   * **Example Output:** "fy gm ky ho bx mf kk ki md"
-* Program returns an error if ciphertext is not an even length.
+* The program returns an error if ciphertext is not an even length.
   * **Example Input:** "xyz"
   * **Example Output:** "Invalid Ciphertext"
-* Program returns an error if ciphertext has any non-alphabet characters or qs.
+* The program returns an error if ciphertext has any non-alphabet characters or qs.
   * **Example Input:** "123Q!"
   * **Example Output:** "Invalid Ciphertext"
 * For a pair of cipher characters, the program finds the first character's location in keysquare 1, and the second character's location in keysquare 2.
   * **Example Input:** "fy"
   * **Example Output:** [4, 1], [2, 0]
-* Program generates a new pair of coordinates: Coordinate1 = [Char2x, Char1y] and Coordinate2 = [Char1x, Char2y].
+* The program generates a new pair of coordinates: Coordinate1 = [Char2x, Char1y] and Coordinate2 = [Char1x, Char2y].
   * **Example Input:** "fy"
   * **Example Output:** [2, 1], [4, 0]
-* Program returns the letters at these coordinates in the plaintext alphabet square.
+* The program returns the letters at these coordinates in the plaintext alphabet square.
   * **Example Input:** "fy"
   * **Example Output:** "he"
-* Program does this for all pairs of characters in the ciphertext.
+* The program does this for all pairs of characters in the ciphertext.
   * **Example Input:** "fygmkyhobxmfkkkimd"
   * **Example Output:** "helpmeobiwankenobi"
 
 ### XOR Cipher
 #### Encode
 
+* The program runs a bitwise XOR (Exclusive Or) of the message and key.
+  * **Example Input:** KeyBinary=010101, MessageBinary=111111
+  * **Example Output:** CipherBinary=101010
+
+* The program return result in hexadecimal.
+  * **Example Input:** CipherBinary: 101010
+  * **Example Output:** CipherHex="2A"
+
 #### Decode
 
+* The program does not accept a ciphertext that's not in hexadecimal.
+  * **Example Input:** "Hello, World"
+  * **Example Input:** "Invalid Hex"
+* The program runs a bitwise XOR of the ciphertext and key.
+  * **Example Input:** KeyBinary=010101, CipherBinary=101010
+  * **Example Output:** MessageBinary=111111
+* The program returns the message as an ASCII string.
+  * **Example Input:** MesageBinary=111111
+  * **Example Output:** Message="?"
+
 ### AES Cipher
+#### Encode
+
+* The program takes a message and key, and encrypts the message with AES using the given key.
+  * **Example Input:** Message="Hello", Key="World"
+  * **Example Output:** "U2FsdGVkX18euyh1D/f28+iQRoBxkkGmIMof/+wrMHM="
+
+#### Decode
+
+* The program does not accept a ciphertext not in AES format.
+  * **Example Input:** Ciphertext="Hello, World"
+  * **Example Output:** "Invalid AES Code"
+* The program takes ciphertext and key, and decrypts the ciphertext with AES using the given key.
+  * **Example Input:** Ciphertext="U2FsdGVkX18euyh1D/f28+iQRoBxkkGmIMof/+wrMHM=", key="World"
+  * **Example Output:** "Hello"
