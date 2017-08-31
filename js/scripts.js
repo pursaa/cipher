@@ -152,8 +152,8 @@ $(document).ready(function(){
 });
 
 function blinker() {
-    $('.blink-me').fadeOut(500);
-    $('.blink-me').fadeIn(500);
+    $('.blink-me').fadeOut(900);
+    $('.blink-me').fadeIn(900);
 }
 
 function qrClick() {
@@ -163,4 +163,4 @@ function qrClick() {
   $('#qrcode').show();
 }
 
-setInterval(blinker, 1000);
+setInterval(blinker, 2200);
