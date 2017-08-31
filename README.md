@@ -1,4 +1,28 @@
-# Substitution Ciphers
+# Intro to Ciphers
+
+#### _Epicodus Project in JavaScript, HTML, and CSS, August 31, 2017_
+
+#### _**By Kelsey Langlois, Linda Luu, Rafael Furry, Debbie Michel**_
+
+## Description
+
+_This program will run several different ciphers; Caesar, Vigenere, Four-Square, XOR, and AES. Each cipher has a form to take a message and any other necessary information (keys, shift amounts, etc.), and the option to encode or decode the given message. There is also an option to display a scannable QR code (bar code) for all outputs._
+
+_Each cipher has an about page with an explanation of how the cipher works._
+
+## Setup/Installation Requirements
+
+This webpage is available to view on GitHub pages at [langlk.github.io/substitution-ciphers](https://langlk.github.io/substitution-ciphers/)
+
+* _Clone this repository._
+* _Open index.html in the browser of your choice._
+* _To encode or decode a message:_
+  * _Choose a cipher from the drop down menu in the center of the page._
+  * _Enter a message in the input box._
+  * _Enter any additional information needed in the form._
+  * _Click the encode or decode button._
+  * _To get the output as a QR code, click "Get QR Code."_
+* _Use the tabs at the top of the page to navigate to different demos._
 
 ## Specifications
 
@@ -170,3 +194,21 @@
 * The program takes ciphertext and key, and decrypts the ciphertext with AES using the given key.
   * **Example Input:** Ciphertext="U2FsdGVkX18euyh1D/f28+iQRoBxkkGmIMof/+wrMHM=", key="World"
   * **Example Output:** "Hello"
+
+## Known Bugs
+
+_No known bugs at this time_
+
+## Support and contact details
+
+_If you run into any issues or have questions, ideas or concerns please contact Kelsey Langlois at [@gmail.com]; Linda Luu at kels.langlois@gmail.com; Rafael Furry at [@gmail.com]; Debbie Michel at [debbiemichel1633@gmail.com].  You are more then welcome to play with the code and change it in anyway you wish_
+
+## Technologies Used
+
+_This program was written using html, css, javascript, bootstrap and jQuery._
+
+### License
+
+*This software is licensed under the MIT license.*
+
+Copyright (c) 2016 **_Kelsey Langlois, Linda Luu, Rafael Furry, Debbie Michel_**
