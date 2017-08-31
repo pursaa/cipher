@@ -19,7 +19,7 @@ function vigenereCipher(key, message, action) {
     return value
   });
   if (keyValues.includes("Error")) {
-    return "Error";
+    return "Error: Invalid Key";
   }
   var messageArray = message.split("");
   var result = ""

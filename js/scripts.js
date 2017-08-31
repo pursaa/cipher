@@ -1,6 +1,18 @@
+function printError(errorMessage) {
+  $(".error-text").text(errorMessage.substring(6, errorMessage.length));
+  $(".error-text, #qr").addClass("error-showing");
+}
+
+function clearError() {
+  $(".error-text").text("");
+  $(".error-text, #qr").removeClass("error-showing");
+}
+
 $(document).ready(function(){
   $("#input-form").submit(function(event) {
     event.preventDefault();
+    clearError();
+
     var directions = ["left", "right"];
     var message = $("#input").val();
     var shift = parseInt($("#shift").val());
@@ -17,27 +29,38 @@ $(document).ready(function(){
       $("#output").val(output);
       $("#input").val("");
     } else {
-      alert("Please enter a valid number to shift.");
+      printError("Invalid Shift");
     }
   });
 
   $("#vigenere-encode").click(function() {
+    clearError();
     var key = $("#vigenere-key").val();
     var message = $("#input").val();
     var output = encodeVigenere(key, message);
-    $("#output").val(output);
-    $("#input").val("");
+    if (output.includes("Error:")) {
+      printError(output);
+    } else {
+      $("#output").val(output);
+      $("#input").val("");
+    }
   });
 
   $("#vigenere-decode").click(function() {
+    clearError();
     var key = $("#vigenere-key").val();
     var message = $("#input").val();
     var output = decodeVigenere(key, message,);
-    $("#output").val(output);
-    $("#input").val("");
+    if (output.includes("Error:")) {
+      printError(output);
+    } else {
+      $("#output").val(output);
+      $("#input").val("");
+    }
   });
 
   $("#foursquare-encode").click(function(){
+    clearError();
     var key1 = $("#foursquare-key-1").val();
     var key2 = $("#foursquare-key-2").val();
     var message = $("#input").val();
@@ -47,6 +70,7 @@ $(document).ready(function(){
   });
 
   $("#foursquare-decode").click(function(){
+    clearError();
     var key1 = $("#foursquare-key-1").val();
     var key2 = $("#foursquare-key-2").val();
     var message = $("#input").val();
@@ -56,6 +80,7 @@ $(document).ready(function(){
   });
 
   $("#xor-encode").click(function(){
+    clearError();
     var message = $("#input").val();
     var key = $("#xor-key").val();
     var output = xor(key, message);
@@ -64,6 +89,7 @@ $(document).ready(function(){
   });
 
   $("#xor-decode").click(function(){
+    clearError();
     var message = $("#input").val();
     var key = $("#xor-key").val();
     var output = xorDecode(key, message);
@@ -72,6 +98,7 @@ $(document).ready(function(){
   });
 
   $("#crypto-encode").click(function(){
+    clearError();
     var message = $("#input").val();
     var key = $("#crypto-key").val();
     var output = cryptoEncode(key, message);
@@ -80,6 +107,7 @@ $(document).ready(function(){
   });
 
   $("#crypto-decode").click(function(){
+    clearError();
     var message = $("#input").val();
     var key = $("#crypto-key").val();
     var output = cryptoDecode(key, message);
@@ -89,8 +117,9 @@ $(document).ready(function(){
   });
 
   $(".ciphers").change(function() {
-  var cipher = $(".ciphers").val();
-  $(".cipher").hide();
+    clearError();
+    var cipher = $(".ciphers").val();
+    $(".cipher").hide();
     $(cipher).show();
     $("#xor").hide();
     $(cipher).show();

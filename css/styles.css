@@ -104,5 +104,13 @@ select {
 }
 
 p {
-    text-indent: 50px;
+  text-indent: 50px;
+}
+
+div.error-showing {
+  height: 2vh;
+}
+
+#qr.error-showing {
+  margin-top: 4vh;
 }
