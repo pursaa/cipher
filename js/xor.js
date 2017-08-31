@@ -7,20 +7,21 @@ function xor(key, message){
                 }
         }
         output = output.hexEncode();
-        console.log(output);
         return output;
 }
 
 function xorDecode(key, message){
-        message = message.hexDecode();
         var output = [];
-        for (var i = 0; i < message.length; ){
-                for(var j = 0; (j < key.length && i < message.length); i++, j++) {
-                        output += String.fromCharCode(message[i].charCodeAt(0) ^ key[j].charCodeAt(0));
-                        console.log(output);
+        if(isHex(message)){
+                message = message.hexDecode();
+                for (var i = 0; i < message.length; ){
+                        for(var j = 0; (j < key.length && i < message.length); i++, j++) {
+                                output += String.fromCharCode(message[i].charCodeAt(0) ^ key[j].charCodeAt(0));
+                        }
                 }
+        } else {
+                output = "Please enter valid hex code";
         }
-        console.log(output);
         return output;
 }
 
@@ -31,7 +32,7 @@ String.prototype.hexEncode = function(){
         hex = this.charCodeAt(i).toString(16);
         result += ("000"+hex).slice(-4);
         }
-        return result
+        return result;
 }
 
 String.prototype.hexDecode = function(){
@@ -42,4 +43,9 @@ String.prototype.hexDecode = function(){
                 back += String.fromCharCode(parseInt(hexes[j], 16));
         }
         return back;
+}
+
+function isHex(h) {
+        var re = /[0-9A-Fa-f]{6}/g;
+        return re.test(h);
 }
