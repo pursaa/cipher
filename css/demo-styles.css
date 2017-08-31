@@ -33,6 +33,7 @@ h3.key-letter {
 
 #vigenere-btn {
   margin-left: 0%;
+  display: inline-block;
 }
 
 #demo-shift{
