@@ -6,47 +6,28 @@
 * The program does nothing with _non-alphabet_ characters.
   * Example _Input:_ "12345!"
   * Example _Output:_ "12345!"
-
-
 * The program replaces a character other than the first 3 letters in the alphabet with the letter 3 places before it.
   * Example _Input:_ "D"
   * Example _Output:_ "A"
-
-
 * The program replaces a, b, or c with x, y, and z, respectively.
   * Example _Input:_ "A"
   * Example _Output:_ "X"
-
-
 * The program replaces characters with the coded character of the same case.
   * Example _Input:_ "a"
   * Example _Output:_ "x"
-
-
 * The program allows the user to choose the number of characters they want to shift left or right.
-  * Example _Input:_ 3 in the shift by box and "D" in the input box
-  * Example _Output:_ Output will be "A" or G depending on the chosen direction.
-
-
-* The program allows the user-specified to shift the alphabet characters left or right to encode the output.
-  * Example _Input:_, shift right:  "Goat", shift equals 3
-  * Example _Output:_ "jrdw".
-  * Example _Input:_, shift left:  "Goat", shift equals 3
-  * Example _Output:_ "dlxq".
-
-
+  * Example _Input:_ **"3"** in the shift by box and **"D"** in the input box
+  * Example _Output:_ Output will be **"A"** or **G** depending on the chosen direction.
 * The program allows the user to choose the direction to shift the letters (left or right) and shifts the message accordingly.
-  * Example _Input:_  "jrdw" is entered in the input box, shift equals 3 and shift right is selected
-  * Example _Output:_ Output will be "Goat" or G depending on the chosen direction.
-  * Example _Input:_:  "dlxq" is entered in the input box, shift equals 3 and shift left is selected
-  * Example _Output:_ Output will be "Goat" or G depending on the chosen direction.
-
-
+  * Example _Input:_, shift = **"right"**, input = **"Goat"**, shift number = **"3"**
+  * Example _Output:_ **"jrdw"**
+  * Example _Input:_, shift = **"left"**, input = **"Goat"**, shift number = **"3"**
+  * Example _Output:_ **"dlxq"**
 * The program will allow the user to Encode and Decode the message
-  * Example _Encode Input:_ "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
-  * Example _Output:_ "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"
-  * Example _Decode Input:_ "QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"
-  * Example _Output:_ "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
+  * Example _Encode Input:_  _"THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"_
+  * Example _Output:_  **"QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"**
+  * Example _Decode Input:_  _"QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"_
+  * Example _Output:_  **"THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"**
 
 
 ### Encode: Vigenere
