@@ -7,20 +7,20 @@
     <script src="js/foursquare.js"></script>
     <script src="js/crypto.js"></script>
     <script src="js/xor.js"></script>
-    <script src="js/encode.js"></script>
-    <script src="js/decode.js"></script>
+    <script src="js/caesar.js"></script>
+    <script src="js/vigenere.js"></script>
     <script src="js/scripts.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
-    <title>Substitution Cipher</title>
+    <title>Ciphers</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <span class="blink-me">Substitution Ciphers</span>
+        <span class="blink-me">Intro to Ciphers</span>
       </div>
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -37,16 +37,23 @@
           </ul>
         </div>
       </nav>
-      <h2>Explanation of what Ciphers are: </h2>
-      <p>In cryptography, a cipher (or cypher) is an algorithm for performing encryption or decryption—a series of well-defined steps that can be followed as a procedure. An alternative, less common term is encipherment. To encipher or encode is to convert information into cipher or code. In common parlance, "cipher" is synonymous with "code", as they are both a set of steps that encrypt a message; however, the concepts are distinct in cryptography, especially classical cryptography.</p>
-      <p> This page has five different ciphers': Caesar, Vigenere, Four-Square, Xor, and AES Crypto.  Press the button below to choose one and see what it does. </p>
+      <h2>Ciphers 101:</h2>
+      <p>
+        This website lets you encode and decode messages with 5 different ciphers. The first four are <a href="https://en.wikipedia.org/wiki/Substitution_cipher">Substitution Ciphers</a>: ciphers which replace each unit of a message with a unit of ciphertext. We've included several substitution ciphers than can be easily implemented with pen and paper, as well as binary XOR, a substitution cipher usually implemented with a computer.
+      </p>
+      <p>
+        Since substitution ciphers are easily broken, we've also provided you the option to encrypt your messages with <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">AES Crypto</a>, a much more secure encryption method.
+      </p>
+      <p>
+        If you want to learn more about any of these ciphers, you can check out the links above for explanations and demos. Happy encrypting!
+      </p>
       <br>
       <select id="option" class="ciphers">
         <option>Choose a cipher</option>
         <option value="#caesar-cipher">Caesar Cipher</option>
         <option value="#vigenere">Vigenere Cipher</option>
         <option value="#four-square">Four Square Cipher</option>
-        <option value="#xor">Xor Cipher</option>
+        <option value="#xor">XOR Cipher</option>
         <option value="#a-e-s-crypto">AES Crypto</option>
       </select>
       <!-- input -->
@@ -78,7 +85,8 @@
               <button type="submit" class="btn">Submit</button>
             </div>
           </div>
-        <!-- vigenere -->
+
+          <!-- vigenere -->
           <div id="vigenere" class="cipher">
             <div class="form-group">
               <h4>Vigenere Cipher</h4>
@@ -103,17 +111,19 @@
             <button type="button" id="foursquare-encode" class="btn">4-Square Encode</button>
             <button type="button" id="foursquare-decode" class="btn">4-Square Decode</button>
           </div>
-        <!-- XOR -->
+
+          <!-- XOR -->
           <div id = "xor">
             <div class="form-group" class="cipher">
-              <h4>XOR Cipher</h4>
+              <h4>Binary XOR Cipher</h4>
               <label for="xor-key">XOR Key:</label>
               <input type="text" id="xor-key" class="form-control">
             </div>
             <button type="button" id="xor-encode" class="btn">XOR Encode</button>
             <button type="button" id="xor-decode" class="btn">XOR Decode</button>
           </div>
-        <!-- Crypto -->
+
+          <!-- Crypto -->
           <div id="a-e-s-crypto" class="cipher">
             <div class="form-group">
               <h4>AES Crypto</h4>
@@ -123,17 +133,24 @@
             <button type="button" id="crypto-encode" class="btn">Crypto Encode</button>
             <button type="button" id="crypto-decode" class="btn">Crypto Decode</button>
           </div>
+
+          <div class="error-message">
+            <div class="error-text">
+
+            </div>
+          </div>
+
           <div>
             <button type="button" id="qr" class="btn" onclick="qrClick()">QR Button</button>
           </div>
         </div>
-      <!-- output -->
+        <!-- output -->
         <div class="form-group col-sm-4">
           <label for="output">Output: </label>
           <textarea id="output" rows="14" class="form-control" readonly></textarea>
         </div>
       </form>
-      <!-- QR code output -->
+
       <div id="qrcode"></div>
     </div>
   </body>

@@ -1,11 +1,11 @@
 var testMessage = "Helloworld";
 
 function fillVigenereSquare() {
-  var result = "<p class='line-0'> &nbsp;&nbsp;" + fillAlphabet(encode, 0, "left") + "</p>";
+  var result = "<p class='line-0'> &nbsp;&nbsp;" + fillAlphabet(caesarShift, 0, "left") + "</p>";
   for (var i = 97; i < 123; i++) {
     var line = "<p class='letter-" + i + "'><span class='first'>"
     + String.fromCharCode(i) + " </span>" +
-    fillAlphabet(encode, i - 97, "right") + "</p>";
+    fillAlphabet(caesarShift, i - 97, "right") + "</p>";
     result += line;
   }
   return result;
@@ -108,19 +108,21 @@ function displayVigenere(code, key) {
 }
 
 $(document).ready(function() {
-  $(".original-message, .cipher-message").html(fillMessage(testMessage, encode, 0, "left"));
+  $(".original-message, .cipher-message").html(fillMessage(testMessage, caesarShift, 0, "left"));
   $(".vigenere-square").html(fillVigenereSquare());
 
   $("#vigenere-demo").submit(function(event) {
     event.preventDefault();
-    
+    $(".error-message").text("");
+
     var key = $("#vigenere-demo-key").val();
     var code = encodeVigenere(key, testMessage);
     if (code.includes("Error")) {
-      alert("Please Enter a Valid Key");
+      $(".error-message").text("Invalid Key");
     } else {
       $(".cipher-message").text("");
       $(".vigenere-key").html(makeVigenereKey(key));
+      key = key.toLowerCase();
       displayVigenere(code, key);
     }
   });

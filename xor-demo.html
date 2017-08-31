@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/demo-styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/foursquare.js"></script>
+  <script src="js/xor.js"></script>
+  <script src="js/encode.js"></script>
+  <script src="js/decode.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/demos.js"></script>
+  <title>XOR Cipher</title>
+</head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>XOR Cipher</h1>
+      </div>
+      <div class="cipher-intro xor-intro">
+        <p>
+          The XOR Cipher opereates on the bits that make up a message and key, running a simple binary "exclusive or" (XOR) on them. This means that if two corresponding bits are the same, the resulting bit is 0, and if two corresponding bits are different, the resulting bit is 1. The result after all bits have been XORed is the ciphertext. Decoding the message simply involves running another binary XOR on the key and ciphertext.
+        </p>
+        <p>
+          XOR Ciphers can be broken more than one way, unless they use a one-time pad. This special case requires that the key be completely random, the same length as the message, and (as the name suggests) only used once. Provided only the sender and receiver have the pad, the encoded message is truly secure.
+        </p>
+        <p>
+          Learn more about XOR ciphers <a href="https://en.wikipedia.org/wiki/XOR_cipher">here</a>.</p>
+      </div>
+    </div>
+  </body>
+</html>

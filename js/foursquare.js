@@ -1,7 +1,17 @@
 function FourSquare(key1, key2) {
-  this.key1 = this.makeKey(key1);
-  this.key2 = this.makeKey(key2);
-  this.alphabet = this.makeKey("");
+  if (this.checkKey(key1) || this.checkKey(key2)) {
+    this.error = "Error: Invalid Key";
+  } else {
+    this.key1 = this.makeKey(key1);
+    this.key2 = this.makeKey(key2);
+    this.alphabet = this.makeKey("");
+  }
+}
+
+FourSquare.prototype.checkKey = function(key) {
+  if(/[^a-z]/.test(key)) {
+    return "Error: Invalid Key";
+  }
 }
 
 FourSquare.prototype.makeKey = function(key) {
@@ -79,6 +89,26 @@ FourSquare.prototype.decode = function(message) {
       var letter2 = this.alphabet[coordinate1[0]][coordinate2[1]];
       result += letter1 + letter2;
     }
+    return result;
+  }
+}
+
+function encodeFourSquare(key1, key2, message) {
+  var cipher = new FourSquare(key1, key2);
+  if (cipher.error === "Error: Invalid Key") {
+    return cipher.error;
+  } else {
+    var result = cipher.encode(message);
+    return result;
+  }
+}
+
+function decodeFourSquare(key1, key2, message) {
+  var cipher = new FourSquare(key1, key2);
+  if (cipher.error === "Error: Invalid Key") {
+    return cipher.error;
+  } else {
+    var result = cipher.decode(message);
     return result;
   }
 }

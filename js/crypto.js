@@ -1,11 +1,14 @@
 function cryptoEncode(key, message){
-  alert("hello");
   var encrypted = CryptoJS.AES.encrypt(message, key);
   return encrypted;
-  alert("hello");
 }
 
 function cryptoDecode(key, message){
-  var decrypted = CryptoJS.AES.decrypt(message, key);
-  return decrypted.toString(CryptoJS.enc.Utf8);
+  var decrypted;
+  if(message.startsWith("U2F")){
+    var decrypted = CryptoJS.AES.decrypt(message, key);
+    return decrypted.toString(CryptoJS.enc.Utf8);
+  } else {
+    return "Error: Invalid AES crypto code";
+  }
 }
