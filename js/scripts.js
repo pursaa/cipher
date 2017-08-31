@@ -87,12 +87,11 @@ $(document).ready(function(){
     var output = cryptoDecode(key, message);
     $("#output").val(output);
     $("#input").val("");
-
   });
 
   $(".ciphers").change(function() {
-  var cipher = $(".ciphers").val();
-  $(".cipher").hide();
+    var cipher = $(".ciphers").val();
+    $(".cipher").hide();
     $(cipher).show();
     $("#xor").hide();
     $(cipher).show();
@@ -114,7 +113,6 @@ function qrClick() {
   $("#qrcode").html("");
   $('#qrcode').qrcode(input);
   $('#qrcode').show();
-
 }
 
 setInterval(blinker, 1000);

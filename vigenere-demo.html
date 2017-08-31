@@ -43,38 +43,42 @@
           The Vigenere Cipher can be visualized as a 26 by 26 grid, with each row and column showing the Caesar-shifted alphabet corresponding to its first letter. The cipher character is located where the key letter's column and message letter's row intersect.
         </p>
         <p>
-          Learn more about Vigenere Ciphers <a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">here</a>.
+          Learn more about Vigenere Ciphers <a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher" class="wiki-link">here</a>.
         </p>
       </div>
 
       <div class="demo vigenere-demo">
         <h2>Try it out:</h2>
-        <form id="vigenere-demo">
-          <label for="vigenere-demo-key">Key:</label>
-          <input type="text" id="vigenere-demo-key" class="form-control">
-          <br>
-          <button type="submit" class="btn" id="vigenere-btn">Encode!</button>
-        </form>
-      </div>
-      <br>
-      <div class="output">
-        <p>
-          Key: <span class="vigenere-key"></span>
-        </p>
-        <p>
-          Original Message: <span class="original-message"></span>
-        </p>
-        <p>
-          Cipher Message: &nbsp;&nbsp;<span class="cipher-message"></span>
-        </p>
-        <div class="row">
-          <div class="col-sm-3 y-axis">
-            <h3 class="message-letter">Message Letter</h3>
-          </div>
-          <div class="col-sm-9">
-            <h3 class="key-letter">Key Letter</h3>
-            <div class="vigenere-square">
 
+        <div class="output">
+          <div class="row">
+            <div class="col-sm-4 y-axis">
+
+              <form id="vigenere-demo">
+                <label for="vigenere-demo-key">Key:</label>
+                <input type="text" id="vigenere-demo-key" class="form-control">
+                <br>
+                <button type="submit" class="btn" id="vigenere-btn">Encode!</button>
+              </form>
+              <br>
+              <p>
+                Key: <span class="vigenere-key"></span>
+              </p>
+              <p>
+                Original Message: <span class="original-message"></span>
+              </p>
+              <p>
+                Cipher Message: &nbsp;&nbsp;<span class="cipher-message"></span>
+              </p>
+            </div>
+            <div class="col-sm-1">
+              <h3 class="message-letter">Message Letter</h3>
+            </div>
+            <div class="col-sm-7">
+              <h3 class="key-letter">Key Letter</h3>
+              <div class="vigenere-square">
+
+              </div>
             </div>
           </div>
         </div>

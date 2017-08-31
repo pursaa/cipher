@@ -1,6 +1,7 @@
 .container {
   margin-bottom: 40px;
 }
+
 h3 {
   text-align: center;
 }
@@ -11,17 +12,43 @@ h3.key-letter {
 }
 
 .y-axis {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 500px;
+  text-align: left;
 }
 
+.message-letter {
+  margin-top: 300px;
+}
 .vigenere-square p {
   line-height: 22px;
   margin: 0px;
 }
 
 .highlighted {
-  color: white;
+  color: lightgreen;
+}
+
+.vigenere-demo p {
+  text-indent: 0px;
+}
+
+#vigenere-btn {
+  margin-left: 0%;
+}
+
+#demo-shift{
+  width: 30%;
+  font-size: 22px;
+  font-weight: lighter;
+  background-color: #141414;
+  color: lightgreen;
+}
+
+#vigenere-demo-key{
+  background-color: #141414;
+  color: lightgreen;
+  font-size: 25px;
+}
+
+.wiki-link {
+  color: lightgreen;
 }
