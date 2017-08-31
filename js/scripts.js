@@ -32,7 +32,7 @@ $(document).ready(function(){
   $("#vigenere-decode").click(function() {
     var key = $("#vigenere-key").val();
     var message = $("#input").val();
-    var output = vigenereDecode(key, message);
+    var output = decodeVigenere(key, message);
     $("#output").val(output);
     $("#input").val("");
   });
